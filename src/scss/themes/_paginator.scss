@@ -1,0 +1,80 @@
+.cs-paginator {
+    color: var(--color-gray-1);
+    padding: 0.5rem 1rem;
+
+    .cs-paginator-first,
+    .cs-paginator-prev,
+    .cs-paginator-next,
+    .cs-paginator-last,
+    .cs-paginator-pages .cs-paginator-page {
+        background-color: transparent;
+        border: none;
+        border-color: transparent;
+        box-shadow: none !important;
+        color: var(--color-gray-1);
+        width: 40px;
+        height: 40px;
+        @media (min-width: 768px) {
+            width: 50px;
+            height: 50px;
+        }
+        margin: 0.143rem;
+        border-radius: 50%;
+
+        &:not(.cs-disabled):not(.cs-highlight):hover {
+            background: #e9ecef;
+            color: #343a40;
+            border: none;
+            border-color: transparent;
+        }
+    }
+
+    .cs-paginator-pages .cs-paginator-page {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: var(--color-gray-1);
+        box-shadow: none !important;
+
+        &.cs-highlight {
+            border: 0 none;
+            border-color: transparent;
+            font-weight: 700;
+            background: #eef2ff;
+            color: var(--primary-color);
+        }
+
+        &:not(.cs-highlight):hover {
+            background: #e9ecef;
+            border-color: transparent;
+            color: #343a40;
+        }
+    }
+
+    .cs-dropdown {
+        margin-left: 0.5rem;
+        height: 3rem;
+        .cs-dropdown-label {
+            padding-right: 0;
+        }
+    }
+
+    .cs-paginator-page-input {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        .cs-inputtext {
+            max-width: 3rem;
+        }
+    }
+
+    .cs-paginator-current {
+        background-color: transparent;
+        border: 0 none;
+        color: var(--color-gray-1);
+        min-width: 3rem;
+        height: 3rem;
+        margin: 0.143rem;
+        padding: 0 0.5rem;
+    }
+}

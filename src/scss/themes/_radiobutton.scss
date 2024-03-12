@@ -1,0 +1,61 @@
+.cs-radiobutton {
+    width: 16px;
+    height: 16px;
+
+    .cs-radiobutton-box {
+        border: 1px solid var(--color-gray-2);
+        background: var(--color-white);
+        width: 16px;
+        height: 16px;
+        color: #495057;
+        border-radius: 50%;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+        &:not(.cs-disabled):not(.cs-highlight):hover {
+            border-color: #6366f1;
+        }
+        &:not(.cs-disabled).cs-focus {
+            outline: 0 none;
+            outline-offset: 0;
+            border-color: #6366f1;
+        }
+
+        .cs-radiobutton-icon {
+            width: 8px;
+            height: 8px;
+            transition-duration: 0.2s;
+            background-color: var(--primary-color);
+        }
+        &.cs-highlight {
+            background: var(--color-white);
+        }
+        &.cs-highlight:not(.cs-disabled):hover {
+            border-color: var(--primary-color);
+            color: #ffffff;
+        }
+    }
+
+    &.cs-invalid > .cs-radiobutton-box {
+        border-color: var(--border-color-error);
+    }
+
+    &:focus {
+        outline: 0 none;
+    }
+}
+
+.cs-input-filled {
+    .cs-radiobutton .cs-radiobutton-box {
+        background-color: #e9ecef;
+        &:not(.cs-disabled):hover {
+            background-color: #e9ecef;
+        }
+        &.cs-highlight {
+            background: #6366f1;
+
+            &:not(.cs-disabled):hover {
+                background: #4338ca;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.cs-steps {
+    position: relative;
+}
+
+.cs-steps ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.cs-steps-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+.cs-steps .cs-steps-item:before {
+    content: ' ';
+    border-top: 1px solid #dee2e6;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    display: block;
+    position: absolute;
+    margin-top: -1rem;
+}
+
+.cs-steps-item .cs-menuitem-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.cs-steps.cs-readonly .cs-steps-item {
+    cursor: auto;
+}
+
+.cs-steps-item.cs-steps-current .cs-menuitem-link {
+    cursor: default;
+}
+
+.cs-steps-title {
+    white-space: nowrap;
+}
+
+.cs-steps-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-steps-title {
+    display: block;
+}

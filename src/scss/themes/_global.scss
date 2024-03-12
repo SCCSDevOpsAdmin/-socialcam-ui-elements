@@ -1,0 +1,39 @@
+$csDefaultColors: (
+    gradient:
+        linear-gradient(
+            91.75deg,
+            var(--primary-color) 0%,
+            var(--secondary-color) 100%
+        ),
+    primary: var(--primary-color),
+    secondary: var(--secondary-color),
+    alternate: var(--alternate-color),
+    black: var(--color-black),
+    white: var(--color-white),
+    gray-1: var(--color-gray-1),
+    gray-2: var(--color-gray-2),
+    gray-dark: var(--color-dark-gray),
+    gray-light: var(--color-light-gray),
+    light-green: var(--color-light-green),
+    success: var(--color-success),
+    danger: var(--color-danger),
+);
+
+@each $bgname, $bgColor in $csDefaultColors {
+    .cs-bg-#{'' + $bgname} {
+        background-color: $bgColor;
+    }
+}
+.cs-bg-gradient {
+    background: linear-gradient(
+        91.75deg,
+        var(--primary-color) 0%,
+        var(--secondary-color) 100%
+    );
+}
+
+@each $textName, $textColor in $csDefaultColors {
+    .cs-color-#{'' + $textName} {
+        color: $textColor;
+    }
+}

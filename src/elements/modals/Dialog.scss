@@ -1,0 +1,241 @@
+.cs-dialog-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    background-color: transparent;
+    transition-property: background-color;
+}
+
+.cs-dialog-visible {
+    display: flex;
+}
+
+.cs-dialog-mask.cs-component-overlay {
+    pointer-events: auto;
+}
+
+.cs-dialog {
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    max-height: 90%;
+    transform: scale(1);
+    position: relative;
+
+    .cs-dialog-header-icons {
+        display: flex;
+        align-self: flex-start;
+        min-width: 32px;
+        flex-grow: 2;
+        flex-shrink: 2;
+        width: 100%;
+
+        &.left {
+            justify-content: flex-start;
+        }
+        &.right {
+            justify-content: flex-end;
+        }
+    }
+
+    .cs-dialog-header-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .cs-dialog-title {
+        flex-grow: 1;
+        width: 100%;
+    }
+}
+
+.cs-dialog-content {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.cs-dialog-header {
+    display: flex;
+    //grid-template-rows: 1fr;
+    //grid-template-columns: 1fr 1fr 1fr;
+    justify-content: stretch;
+    align-items: center;
+    gap: 10px;
+}
+
+.cs-dialog-footer {
+    flex-shrink: 0;
+}
+
+/* Fluid */
+.cs-fluid .cs-dialog-footer .cs-button {
+    width: auto;
+}
+
+/* Animation */
+/* Center */
+.cs-dialog-enter {
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+.cs-dialog-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cs-dialog-enter-done {
+    transform: none;
+}
+
+.cs-dialog-exit-active {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Top, Bottom, Left, Right, Top* and Bottom* */
+.cs-dialog-top .cs-dialog,
+.cs-dialog-bottom .cs-dialog,
+.cs-dialog-left .cs-dialog,
+.cs-dialog-right .cs-dialog,
+.cs-dialog-tocs-left .cs-dialog,
+.cs-dialog-tocs-right .cs-dialog,
+.cs-dialog-bottom-left .cs-dialog,
+.cs-dialog-bottom-right .cs-dialog {
+    margin: 0.75em;
+}
+
+.cs-dialog-top .cs-dialog-enter,
+.cs-dialog-top .cs-dialog-exit-active {
+    transform: translate3d(0px, -100%, 0px);
+}
+
+.cs-dialog-bottom .cs-dialog-enter,
+.cs-dialog-bottom .cs-dialog-exit-active {
+    transform: translate3d(0px, 100%, 0px);
+}
+
+.cs-dialog-left .cs-dialog-enter,
+.cs-dialog-left .cs-dialog-exit-active,
+.cs-dialog-tocs-left .cs-dialog-enter,
+.cs-dialog-tocs-left .cs-dialog-exit-active,
+.cs-dialog-bottom-left .cs-dialog-enter,
+.cs-dialog-bottom-left .cs-dialog-exit-active {
+    transform: translate3d(-100%, 0px, 0px);
+}
+
+.cs-dialog-right .cs-dialog-enter,
+.cs-dialog-right .cs-dialog-exit-active,
+.cs-dialog-tocs-right .cs-dialog-enter,
+.cs-dialog-tocs-right .cs-dialog-exit-active,
+.cs-dialog-bottom-right .cs-dialog-enter,
+.cs-dialog-bottom-right .cs-dialog-exit-active {
+    transform: translate3d(100%, 0px, 0px);
+}
+
+.cs-dialog-top .cs-dialog-enter-active,
+.cs-dialog-bottom .cs-dialog-enter-active,
+.cs-dialog-left .cs-dialog-enter-active,
+.cs-dialog-tocs-left .cs-dialog-enter-active,
+.cs-dialog-bottom-left .cs-dialog-enter-active,
+.cs-dialog-right .cs-dialog-enter-active,
+.cs-dialog-tocs-right .cs-dialog-enter-active,
+.cs-dialog-bottom-right .cs-dialog-enter-active {
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0.3s ease-out;
+}
+
+.cs-dialog-top .cs-dialog-exit-active,
+.cs-dialog-bottom .cs-dialog-exit-active,
+.cs-dialog-left .cs-dialog-exit-active,
+.cs-dialog-tocs-left .cs-dialog-exit-active,
+.cs-dialog-bottom-left .cs-dialog-exit-active,
+.cs-dialog-right .cs-dialog-exit-active,
+.cs-dialog-tocs-right .cs-dialog-exit-active,
+.cs-dialog-bottom-right .cs-dialog-exit-active {
+    transition: all 0.3s ease-out;
+}
+
+/* Maximize */
+.cs-dialog-maximized {
+    transition: none;
+    transform: none;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100%;
+    top: 0px !important;
+    left: 0px !important;
+}
+
+.cs-dialog-maximized .cs-dialog-content {
+    flex-grow: 1;
+}
+
+/* Position */
+.cs-dialog-left {
+    justify-content: flex-start;
+}
+
+.cs-dialog-right {
+    justify-content: flex-end;
+}
+
+.cs-dialog-top {
+    align-items: flex-start;
+}
+
+.cs-dialog-tocs-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cs-dialog-tocs-right {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.cs-dialog-bottom {
+    align-items: flex-end;
+}
+
+.cs-dialog-bottom-left {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.cs-dialog-bottom-right {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.cs-confirm-dialog .cs-dialog-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Resizable */
+.cs-dialog .cs-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    bottom: 1px;
+}
+
+.cs-dialog-draggable .cs-dialog-header {
+    cursor: move;
+}

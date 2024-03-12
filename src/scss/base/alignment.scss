@@ -1,0 +1,39 @@
+$textAlignOptions: (
+    center: center,
+    start: start,
+    end: end,
+    left: left,
+    right: right,
+);
+
+@each $option, $value in $textAlignOptions {
+    .text-align-#{$option} {
+        text-align: $value;
+    }
+}
+
+$alignItemsOptions: (
+    baseline: baseline,
+    center: center,
+    stretch: stretch,
+    start: start,
+    flex-start: flex-start,
+    self-start: self-start,
+    end: end,
+    flex-end: flex-end,
+    self-end: self-end,
+    left: left,
+    right: right,
+);
+
+@each $option, $value in $alignItemsOptions {
+    .align-items-#{$option} {
+        align-items: $value;
+    }
+}
+
+@each $option, $value in $alignItemsOptions {
+    .align-self-#{$option} {
+        align-self: $value;
+    }
+}

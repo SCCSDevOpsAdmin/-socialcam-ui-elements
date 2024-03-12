@@ -1,0 +1,166 @@
+@use './themes/theme.scss';
+@import './layout/common';
+@import './base';
+
+html {
+    height: 100%;
+    font-size: 16px;
+}
+* {
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 125px;
+    }
+    &::-webkit-scrollbar:horizontal {
+        height: 6px;
+        width: 125px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 30px;
+        background-color: #f3f4f4;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background-color: #d0d2d9;
+    }
+    // &::-webkit-scrollbar-thumb:hover {
+    //     //background: rgba(0, 0, 0, 0.4);
+    // }
+    //&::-webkit-scrollbar-thumb:active {
+    //    background: rgba(0, 0, 0, 0.9);
+    //}
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+
+    --device-max-width-break: 960px;
+
+    --module-header-font-size: 24px;
+    --module-header-font-weight: 700;
+    --module-header-line-height: 140%;
+    --module-header-font-color: var(--color-main);
+}
+
+.cs-invalid {
+    color: var(--font-color-error);
+}
+
+.cs-component {
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.cp-component-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cs-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    &input {
+        transform: scale(0);
+    }
+    &select {
+        transform: scale(0);
+    }
+}
+.cs-hidden-accessible {
+    input,
+    select {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+.cs-connected-overlay-enter-done {
+    transform: none;
+}
+
+.fileUpload-Demo {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 275px;
+    height: 199px;
+    left: 34px;
+    top: 161px;
+
+    /* Grey 3 */
+    border: 2px dashed #b8b8b8;
+    border-radius: 24px;
+}
+
+.cs-link {
+    text-align: left;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+//global Classes
+.device-hide {
+    @media (max-width: 1280px) {
+        display: none !important;
+    }
+}
+.desktop-hide {
+    @media (min-width: 1280px) {
+        display: none !important;
+    }
+}
+
+//Move to UI Elements flex
+.h-full {
+    height: 100% !important;
+}
+.w-full {
+    width: 100% !important;
+}
+
+.flex-1-1-0 {
+    flex-grow: 5;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.cs-underline {
+    text-decoration: underline !important;
+}

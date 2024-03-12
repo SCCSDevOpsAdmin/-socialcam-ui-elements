@@ -1,0 +1,45 @@
+.cs-fileupload-content {
+    position: relative;
+}
+
+.cs-fileupload-row {
+    display: flex;
+    align-items: center;
+}
+
+.cs-fileupload-row > div {
+    flex: 1 1 auto;
+    width: 25%;
+}
+
+.cs-fileupload-row > div:last-child {
+    text-align: right;
+}
+
+.cs-fileupload-content > .cs-progressbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cs-button.cs-fileupload-choose {
+    position: relative;
+    overflow: hidden;
+}
+
+.cs-button.cs-fileupload-choose input[type='file'] {
+    display: none;
+}
+
+.cs-fileupload-choose.cs-fileupload-choose-selected input[type='file'] {
+    display: none;
+}
+
+.cs-fileupload-filename {
+    word-break: break-all;
+}
+
+.cs-fluid .cs-fileupload .cs-button {
+    width: auto;
+}

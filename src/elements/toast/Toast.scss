@@ -1,0 +1,107 @@
+.cs-toast {
+    position: fixed;
+    width: 450px;
+}
+
+.cs-toast-message-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.cs-toast-message-text {
+    flex: 1 1 auto;
+}
+
+.cs-toast-detail {
+    overflow-wrap: anywhere;
+}
+
+.cs-toast-top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.cs-toast-top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.cs-toast-bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.cs-toast-bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.cs-toast-top-center {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (min-width: 1280px) {
+        left: 80%;
+    }
+}
+
+.cs-toast-top-center-customized {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cs-toast-bottom-center {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cs-toast-center {
+    left: 50%;
+    top: 50%;
+    min-width: 20vw;
+    transform: translate(-50%, -50%);
+}
+
+.cs-toast-icon-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.cs-toast-icon-close.cs-link {
+    cursor: pointer;
+}
+
+/* Animations */
+.cs-toast-message-enter {
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.cs-toast-message-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.cs-toast-message-enter-done {
+    transform: none;
+}
+
+.cs-toast-message-exit {
+    opacity: 1;
+    max-height: 1000px;
+}
+
+.cs-toast-message-exit-active {
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0, 1, 0, 1), opacity 0.3s,
+        margin-bottom 0.3s;
+}

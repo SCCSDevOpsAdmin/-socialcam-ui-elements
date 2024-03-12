@@ -1,0 +1,35 @@
+.cs-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cs-paginator-left-content {
+    margin-right: auto;
+}
+
+.cs-paginator-right-content {
+    margin-left: auto;
+}
+
+.cs-paginator-page,
+.cs-paginator-next,
+.cs-paginator-last,
+.cs-paginator-first,
+.cs-paginator-prev,
+.cs-paginator-current {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    user-select: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.cs-paginator-element:focus {
+    z-index: 1;
+    position: relative;
+}

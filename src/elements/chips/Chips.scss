@@ -1,0 +1,45 @@
+.cs-chips {
+    display: inline-flex;
+}
+
+.cs-chips-multiple-container {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    cursor: text;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cs-chips-token {
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.cs-chips-input-token {
+    flex: 1 1 auto;
+    display: inline-flex;
+}
+
+.cs-chips-token-icon {
+    cursor: pointer;
+}
+
+.cs-chips-input-token input {
+    border: 0 none;
+    outline: 0 none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+}
+
+.cs-fluid .cs-chips {
+    display: flex;
+}

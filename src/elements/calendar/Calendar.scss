@@ -1,0 +1,171 @@
+.cs-calendar {
+    position: relative;
+    display: inline-flex;
+    max-width: 100%;
+}
+
+.cs-calendar .cs-inputtext {
+    flex: 1 1 auto;
+    width: 1%;
+}
+
+.cs-calendar-w-btn-right {
+    .cs-inputtext {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .cs-datepicker-trigger {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.cs-calendar-w-btn-left {
+    .cs-inputtext {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .cs-datepicker-trigger {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+/* Fluid */
+.cs-fluid {
+    .cs-calendar {
+        display: flex;
+        .cs-inputtext {
+            width: 1%;
+        }
+        /* Datepicker */
+        .cs-datepicker {
+            min-width: 100%;
+        }
+    }
+}
+
+.cs-datepicker {
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cs-datepicker-inline {
+    display: inline-block;
+    position: static;
+    overflow-x: auto;
+}
+
+/* Header */
+.cs-datepicker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cs-datepicker-title {
+        margin: 0 auto;
+    }
+}
+
+.cs-datepicker-prev,
+.cs-datepicker-next {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Multiple Month DatePicker */
+.cs-datepicker-multiple-month {
+    .cs-datepicker-group-container {
+        display: flex;
+
+        .cs-datepicker-group {
+            flex: 1 1 auto;
+        }
+    }
+}
+
+/* DatePicker Table */
+.cs-datepicker {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    td > span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+/* Month Picker */
+.cs-monthpicker-month {
+    width: 33.3%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+/*  Button Bar */
+.cs-datepicker-buttonbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Time Picker */
+.cs-timepicker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+    }
+
+    > div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+/* Touch UI */
+.cs-datepicker-touch-ui,
+.cs-calendar {
+    .cs-datepicker-touch-ui {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 80vw;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Year Picker */
+.cs-yearpicker-year {
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}

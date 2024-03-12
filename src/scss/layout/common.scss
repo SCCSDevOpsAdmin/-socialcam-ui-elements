@@ -1,0 +1,183 @@
+.cs-component,
+.cs-component * {
+    box-sizing: border-box;
+}
+
+.cs-hidden {
+    display: none;
+}
+
+.cs-hidden-space {
+    visibility: hidden;
+}
+
+.cs-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.cs-hidden-accessible input,
+.cs-hidden-accessible select {
+    transform: scale(0);
+}
+
+.cs-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none;
+}
+
+.cs-disabled,
+.cs-disabled * {
+    cursor: default !important;
+    pointer-events: none;
+    user-select: none;
+}
+
+.cs-component-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cs-overflow-hidden {
+    overflow: hidden;
+}
+
+.cs-unselectable-text {
+    user-select: none;
+}
+
+.cs-scrollbar-measure {
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+    position: absolute;
+    top: -9999px;
+}
+
+@-webkit-keyframes p-fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes p-fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cs-link {
+    text-align: left;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cs-link:disabled {
+    cursor: default;
+}
+
+/* Non react overlay animations */
+.cs-connected-overlay {
+    opacity: 0;
+    transform: scaleY(0.8);
+    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+        opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cs-connected-overlay-visible {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.cs-connected-overlay-hidden {
+    opacity: 0;
+    transform: scaleY(1);
+    transition: opacity 0.1s linear;
+}
+
+/* React based overlay animations */
+.cs-connected-overlay-enter {
+    opacity: 0;
+    transform: scaleY(0.8);
+}
+
+.cs-connected-overlay-enter-active {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+        opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cs-connected-overlay-enter-done {
+    transform: none;
+}
+
+.cs-connected-overlay-exit {
+    opacity: 1;
+}
+
+.cs-connected-overlay-exit-active {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+/* Toggleable Content */
+.cs-toggleable-content-enter {
+    max-height: 0;
+}
+
+.cs-toggleable-content-enter-active {
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 1s ease-in-out;
+}
+
+.cs-toggleable-content-enter-done {
+    transform: none;
+}
+
+.cs-toggleable-content-exit {
+    max-height: 1000px;
+}
+
+.cs-toggleable-content-exit-active {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+}
+
+.cs-sr-only {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}

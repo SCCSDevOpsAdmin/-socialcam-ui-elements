@@ -1,0 +1,7 @@
+.cs-rating-icon {
+    cursor: pointer;
+}
+
+.cs-rating.cs-readonly .cs-rating-icon {
+    cursor: default;
+}

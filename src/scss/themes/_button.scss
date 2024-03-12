@@ -1,0 +1,2095 @@
+.cs-button {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--default-font-size);
+    line-height: var(--default-line-height);
+    padding: 18px 1.25rem;
+    height: 56px;
+    border: 1px solid;
+    border-radius: var(--default-border-radius);
+
+    &.cs-overlay-badge {
+        overflow: visible;
+    }
+
+    .cs-badge {
+        margin-left: 0.5rem;
+    }
+
+    .cs-button-icon-left {
+        margin-right: 0.5rem;
+    }
+
+    .cs-button-icon-right {
+        margin-left: 0.5rem;
+    }
+
+    .cs-button-icon-bottom {
+        margin-top: 0.5rem;
+    }
+
+    .cs-button-icon-top {
+        margin-bottom: 0.5rem;
+    }
+
+    &.cs-button-loading-label-only {
+        &.cs-button-loading-left {
+            .cs-button-label {
+                margin-left: 0.5rem;
+            }
+        }
+        &.cs-button-loading-right {
+            .cs-button-label {
+                margin-right: 0.5rem;
+            }
+        }
+        &.cs-button-loading-top {
+            .cs-button-label {
+                margin-top: 0.5rem;
+            }
+        }
+        &.cs-button-loading-bottom {
+            .cs-button-label {
+                margin-bottom: 0.5rem;
+            }
+        }
+        .cs-button-loading-icon {
+            margin: 0;
+        }
+    }
+
+    &.cs-button-rounded {
+        border-radius: 2rem;
+    }
+
+    &.cs-button-raised {
+        box-shadow:
+            0 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0 2px 2px 0 rgba(0, 0, 0, 0.14),
+            0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    &.cs-button-icon-only {
+        width: 56px;
+        height: 56px;
+        padding: 16px;
+        .cs-button-icon-left,
+        .cs-button-icon-right {
+            margin: 0;
+        }
+
+        &.cs-button-rounded {
+            border-radius: 50%;
+        }
+    }
+    //   &:focus {
+    //    outline: 0 none;
+    //    outline-offset: 0;
+    //    box-shadow: 0 0 0 0.08rem #c7d2fe;
+    //}
+    &.cs-button-xs {
+        font-size: 16px;
+        padding: 8px;
+        height: 32px;
+
+        .cs-button-icon {
+            font-size: 16px;
+        }
+
+        &.cs-button-icon-only {
+            width: 32px;
+            padding: 8px;
+        }
+    }
+
+    &.cs-button-sm {
+        font-size: 18px;
+        padding: 8px 10px;
+        height: 40px;
+
+        .cs-button-icon {
+            font-size: 18px;
+        }
+
+        &.cs-button-icon-only {
+            width: 40px;
+            padding: 8px;
+        }
+    }
+
+    &.cs-button-lg {
+        font-size: 24px;
+        line-height: 29px;
+        height: 80px;
+        padding: 25px 1.5625rem;
+
+        .cs-button-icon {
+            font-size: 24px;
+        }
+
+        &.cs-button-icon-only {
+        }
+    }
+}
+
+.cs-button {
+    color: var(--color-black);
+    background: var(--color-light-gray);
+    border-color: var(--color-light-gray);
+
+    &.cs-disabled {
+        border: 1px;
+    }
+    &:enabled,
+    &:not(button):not(a):not(.cs-disabled) {
+        &:hover {
+            border: 1px solid var(--color-dark-gray);
+        }
+        &:focus {
+            //box-shadow: 0 0 0 0.1px var(--secondary-color);
+        }
+        &:active {
+            border: 1px solid var(--color-black);
+        }
+    }
+    &.cs-button-outlined {
+        background-color: transparent;
+        border: 1px solid;
+
+        &:enabled,
+        &:not(button):not(a):not(.cs-disabled) {
+            &:active {
+                background: rgba(100, 116, 139, 0.16);
+                border: 1px solid;
+            }
+            &:hover {
+                background: rgba(100, 116, 139, 0.04);
+                border: 1px solid;
+            }
+        }
+    }
+    &.cs-button-text {
+        background-color: transparent;
+        border-color: transparent;
+        &:enabled,
+        &:not(button):not(a):not(.cs-disabled) {
+            &:hover {
+                background: rgba(100, 116, 139, 0.04);
+                border-color: transparent;
+                //color: #64748b;
+            }
+            &:active {
+                background: rgba(100, 116, 139, 0.16);
+                border-color: transparent;
+                //scolor: #64748b;
+            }
+        }
+    }
+}
+
+.cs-button {
+    &.cs-button-primary {
+        color: var(--color-white);
+        background: var(--main-gradient-color);
+        //border-color: var(--main-gradient-color);
+        &.cs-disabled {
+            color: rgba(255, 255, 255, 0.25);
+            opacity: 1;
+            border: 1px;
+        }
+        &:enabled,
+        &:not(button):not(a):not(.cs-disabled) {
+            &:hover {
+                border: 1px solid var(--secondary-color);
+            }
+            &:focus {
+                //box-shadow: 0 0 0 0.1px var(--secondary-color);
+            }
+            &:active {
+                border: 1px solid var(--primary-color);
+                //background: #15803d;
+                //color: #ffffff;
+                //border-color: #15803d;
+            }
+        }
+
+        &.cs-button-outlined {
+            background: var(--main-gradient-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            border-color: var(--main-gradient-color);
+            border-image-slice: 1;
+            border-image-source: var(--main-gradient-color);
+            border-width: 1px;
+            border-radius: var(--default-border-radius);
+
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                }
+            }
+
+            &:active {
+            }
+        }
+
+        &.cs-button-text {
+            background: var(--main-gradient-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                }
+                &:active {
+                }
+            }
+        }
+    }
+}
+
+/*Secondary*/
+.cs-button {
+    &.cs-button-secondary {
+        border-color: var(--color-light-gray);
+        background: var(--color-light-gray);
+        color: var(--primary-color);
+
+        &:hover {
+            background: rgba(31, 34, 46, 0.1);
+        }
+        &:enabled,
+        &:not(button):not(a):not(.cs-disabled) {
+            &:hover {
+                background: rgba(31, 34, 46, 0.1);
+                border-color: rgba(31, 34, 46, 0.1);
+            }
+            &:focus {
+                box-shadow: 0 0 0 0.08rem #e2e8f0;
+            }
+            &:active {
+                background: rgba(31, 34, 46, 0.2);
+                border-color: rgba(31, 34, 46, 0.2);
+            }
+        }
+
+        &.cs-button-outlined {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid;
+
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:active {
+                    background: rgba(100, 116, 139, 0.16);
+                    border: 1px solid;
+                }
+                &:hover {
+                    background: rgba(100, 116, 139, 0.04);
+                    border: 1px solid;
+                }
+            }
+        }
+        &.cs-button-text {
+            background-color: transparent;
+            color: var(--primary-color);
+            border-color: transparent;
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                    background: rgba(100, 116, 139, 0.04);
+                    border-color: transparent;
+                }
+                &:active {
+                    background: rgba(100, 116, 139, 0.16);
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
+/*black*/
+.cs-button {
+    &.cs-button-black {
+        background: var(--color-black);
+        color: var(--color-white);
+
+        &.cs-disabled {
+            color: rgba(255, 255, 255, 0.25);
+            opacity: 1;
+            border: 1px;
+        }
+        &:enabled,
+        &:not(button):not(a):not(.cs-disabled) {
+            &:active {
+                border: 1px solid var(--primary-color);
+            }
+        }
+        &.cs-button-outlined {
+            background-color: transparent;
+            color: var(--color-black);
+            border: 1px solid;
+
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:active {
+                    background: rgba(100, 116, 139, 0.16);
+                    border: 1px solid;
+                }
+                &:hover {
+                    background: rgba(100, 116, 139, 0.04);
+                    border: 1px solid;
+                }
+            }
+        }
+        &.cs-button-text {
+            background-color: transparent;
+            color: var(--color-black);
+            border-color: transparent;
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                    background: rgba(100, 116, 139, 0.04);
+                    border-color: transparent;
+                }
+                &:active {
+                    background: rgba(100, 116, 139, 0.16);
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
+/*white*/
+.cs-button {
+    &.cs-button-white {
+        background: var(--color-white);
+        border-color: var(--color-white);
+        color: var(--primary-color);
+
+        &.cs-disabled {
+            color: rgba(255, 255, 255, 0.25);
+            opacity: 1;
+            border: 1px;
+        }
+        &:enabled,
+        &:not(button):not(a):not(.cs-disabled) {
+            &:hover {
+                background: rgba(100, 116, 139, 0.04);
+                border-color: rgba(31, 34, 46, 0.2);
+            }
+            &:active {
+                background: rgba(100, 116, 139, 0.16);
+                border-color: rgba(31, 34, 46, 0.2);
+            }
+        }
+        &.cs-button-outlined {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid;
+
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                    background: rgba(100, 116, 139, 0.04);
+                    border-color: rgba(31, 34, 46, 0.2);
+                }
+                &:active {
+                    background: rgba(100, 116, 139, 0.16);
+                    border-color: rgba(31, 34, 46, 0.2);
+                }
+            }
+        }
+        &.cs-button-text {
+            background-color: transparent;
+            color: var(--primary-color);
+            border-color: transparent;
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                    background: rgba(100, 116, 139, 0.04);
+                    border-color: transparent;
+                }
+                &:active {
+                    background: rgba(100, 116, 139, 0.16);
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
+/*Success*/
+.cs-button {
+    &.cs-button-success {
+        color: #ffffff;
+        background: #22c55e;
+        border: 1px solid #22c55e;
+
+        &:enabled,
+        &:not(button):not(a):not(.cs-disabled) {
+            &:hover {
+                background: #16a34a;
+                color: #ffffff;
+                border-color: #16a34a;
+            }
+            &:focus {
+                box-shadow: 0 0 0 0.08rem #bbf7d0;
+            }
+            &:active {
+                background: #15803d;
+                color: #ffffff;
+                border-color: #15803d;
+            }
+        }
+
+        &.cs-button-outlined {
+            background-color: transparent;
+            color: #22c55e;
+            border: 1px solid;
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                    background: rgba(34, 197, 94, 0.04);
+                    color: #22c55e;
+                    border: 1px solid;
+                }
+            }
+
+            &:active {
+                background: rgba(34, 197, 94, 0.16);
+                color: #22c55e;
+                border: 1px solid;
+            }
+        }
+
+        &.cs-button-text {
+            background-color: transparent;
+            color: #22c55e;
+            border-color: transparent;
+
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                    background: rgba(34, 197, 94, 0.04);
+                    border-color: transparent;
+                    color: #22c55e;
+                }
+                &:active {
+                    background: rgba(34, 197, 94, 0.16);
+                    border-color: transparent;
+                    color: #22c55e;
+                }
+            }
+        }
+    }
+}
+/*Info*/
+.cs-button {
+    &.cs-button-info {
+        color: #ffffff;
+        background: var(--info-color);
+        border: 1px solid var(--info-color);
+        &:enabled {
+            &:hover {
+                background: #2563eb;
+                color: #ffffff;
+                border-color: #2563eb;
+            }
+            &:focus {
+                box-shadow: 0 0 0 0.08rem #bfdbfe;
+            }
+            &:active {
+                background: #1d4ed8;
+                color: #ffffff;
+                border-color: #1d4ed8;
+            }
+        }
+        &.cs-button-outlined {
+            background-color: transparent;
+            color: var(--info-color);
+            border: 1px solid;
+
+            &:enabled {
+                &:hover {
+                    background: rgba(59, 130, 246, 0.04);
+                    color: var(--info-color);
+                    border: 1px solid;
+                }
+            }
+        }
+        &.cs-button-text {
+            background-color: transparent;
+            color: var(--info-color);
+            border-color: transparent;
+        }
+    }
+}
+/*Warning*/
+.cs-button {
+    &.cs-button-warning {
+        color: #ffffff;
+        background: #f59e0b;
+        border: 1px solid #f59e0b;
+
+        &:enabled {
+            &:hover {
+                background: #d97706;
+                color: #ffffff;
+                border-color: #d97706;
+            }
+            &:focus {
+                box-shadow: 0 0 0 0.08rem #fde68a;
+            }
+            &:active {
+                background: #b45309;
+                color: #ffffff;
+                border-color: #b45309;
+            }
+        }
+        &.cs-button-outlined {
+            background-color: transparent;
+            color: #f59e0b;
+            border: 1px solid;
+
+            &:enabled {
+                &:hover {
+                    background: rgba(245, 158, 11, 0.04);
+                    color: #f59e0b;
+                    border: 1px solid;
+                }
+                &:active {
+                    background: rgba(245, 158, 11, 0.16);
+                    color: #f59e0b;
+                    border: 1px solid;
+                }
+            }
+        }
+
+        &.cs-button-text {
+            background-color: transparent;
+            color: #f59e0b;
+            border-color: transparent;
+            &:enabled {
+                &:hover {
+                    background: rgba(245, 158, 11, 0.04);
+                    border-color: transparent;
+                    color: #f59e0b;
+                }
+                &:active {
+                    background: rgba(245, 158, 11, 0.16);
+                    border-color: transparent;
+                    color: #f59e0b;
+                }
+            }
+        }
+    }
+}
+
+.cs-button.cs-button-loading-label-only .cs-button.cs-button-link:enabled:hover,
+.cs-button.cs-button-link:not(button):not(a):not(.cs-disabled):hover {
+    background: transparent;
+    color: #4338ca;
+    border-color: transparent;
+}
+
+.cs-button {
+    &.cs-button-link {
+        color: #4338ca;
+        background: transparent;
+        border: 1px solid transparent;
+
+        &:enabled,
+        :not(button):not(a):not(.cs-disabled) {
+            &:hover {
+                .cs-button-label {
+                    text-decoration: underline;
+                }
+            }
+            &:focus {
+                background: transparent;
+                box-shadow: 0 0 0 0.08rem #c7d2fe;
+                border-color: transparent;
+            }
+            &:enabled {
+                background: transparent;
+                color: #4338ca;
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+/*Crop icon button*/
+.cs-button {
+    &.cs-crop-icon-button {
+        color: #ffffff;
+        background: var(--color-gray-1);
+        border: 1px solid var(--color-gray-1);
+        &:enabled {
+            &:hover {
+                background: #7b7e85;
+                color: #ffffff;
+                border-color: #7b7e85;
+            }
+            &:focus {
+                box-shadow: 0 0 0 0.08rem #bfdbfe;
+            }
+            &:active {
+                background: #7b7e85;
+                color: #ffffff;
+                border-color: #7b7e85;
+            }
+        }
+        &.cs-button-outlined {
+            background-color: transparent;
+            color: var(--color-gray-1);
+            border: 1px solid;
+
+            &:enabled {
+                &:hover {
+                    background: rgba(59, 130, 246, 0.04);
+                    color: var(--color-gray-1);
+                    border: 1px solid;
+                }
+            }
+        }
+        &.cs-button-text {
+            background-color: transparent;
+            color: var(--color-gray-1);
+            border-color: transparent;
+        }
+    }
+}
+
+/*Crop icon button copied!*/
+.cs-button {
+    &.cs-crop-icon-button-1 {
+        color: #ffffff;
+        background: var(--color-gray-1);
+        border: 1px solid var(--color-gray-1);
+        &:enabled {
+            &:hover {
+                background: #7b7e85;
+                color: #ffffff;
+                border-color: #7b7e85;
+            }
+            &:focus {
+                box-shadow: 0 0 0 0.08rem #bfdbfe;
+            }
+            &:active {
+                background: #7b7e85;
+                color: #ffffff;
+                border-color: #7b7e85;
+            }
+        }
+        &.cs-button-outlined {
+            background-color: transparent;
+            color: var(--color-gray-1);
+            border: 1px solid;
+
+            &:enabled {
+                &:hover {
+                    background: rgba(59, 130, 246, 0.04);
+                    color: var(--color-gray-1);
+                    border: 1px solid;
+                }
+            }
+        }
+        &.cs-button-text {
+            background-color: transparent;
+            color: var(--color-gray-1);
+            border-color: transparent;
+        }
+    }
+}
+
+/*Select Button*/
+.cs-selectbutton {
+    .cs-button {
+        background: #ffffff;
+        border: 1px solid #ced4da;
+        color: #495057;
+        transition:
+            background-color 0.2s,
+            color 0.2s,
+            border-color 0.2s,
+            box-shadow 0.2s;
+
+        .cs-button-icon-left,
+        .cs-button-icon-right {
+            color: #6c757d;
+        }
+
+        &.cs-highlight {
+            background: var(--color-main);
+            border-color: var(--color-main);
+            color: #ffffff;
+            .cs-button-icon-left,
+            .cs-button-icon-right {
+                color: #ffffff;
+            }
+            &:hover {
+                background: #4f46e5;
+                border-color: #4f46e5;
+                color: #ffffff;
+
+                .cs-button-icon-left,
+                .cs-button-icon-right {
+                    color: #ffffff;
+                }
+            }
+        }
+
+        &:not(.cs-disabled) {
+            &:not(.cs-highlight) {
+                &:hover {
+                    background: #e9ecef;
+                    border-color: #ced4da;
+                    color: #495057;
+
+                    .cs-button-icon-left,
+                    .cs-button-icon-right {
+                        color: #343a40;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cs-selectbutton {
+    &.cs-invalid > .cs-button {
+        border-color: var(--border-color-error);
+    }
+}
+
+/*Toggle Button*/
+.cs-togglebutton {
+    &.cs-button {
+        background: #ffffff;
+        border: 1px solid #ced4da;
+        color: #495057;
+        transition:
+            background-color 0.2s,
+            color 0.2s,
+            border-color 0.2s,
+            box-shadow 0.2s;
+
+        .cs-button-icon-left,
+        .cs-button-icon-right {
+            color: #6c757d;
+        }
+        &.cs-invalid > .cs-button {
+            border-color: var(--border-color-error);
+        }
+
+        &.cs-highlight {
+            background: var(--color-main);
+            border-color: var(--color-main);
+            color: #ffffff;
+
+            &:hover {
+                background: #4f46e5;
+                border-color: #4f46e5;
+                color: #ffffff;
+                .cs-button-icon-left,
+                .cs-button-icon-right {
+                    color: #ffffff;
+                }
+            }
+
+            .cs-button-icon-left,
+            .cs-button-icon-right {
+                color: #ffffff;
+            }
+        }
+        &:not(.cs-disabled):not(.cs-highlight):hover {
+            background: #e9ecef;
+            border-color: #ced4da;
+            color: #495057;
+
+            .cs-button-icon-left,
+            .cs-button-icon-right {
+                color: #343a40;
+            }
+        }
+    }
+}
+
+.cs-fluid {
+    .cs-button {
+        width: 100%;
+    }
+    .cs-button-icon-only {
+        width: 3rem;
+    }
+    .cs-buttonset {
+        display: flex;
+
+        .cs-button {
+            flex: 1;
+        }
+    }
+}
+
+.cs-buttonset.cs-button-secondary > .cs-button,
+.cs-splitbutton.cs-button-secondary > .cs-button,
+.cs-fileupload-choose.cs-button-secondary {
+    color: #ffffff;
+    background: #64748b;
+    border: 1px solid #64748b;
+}
+
+.cs-buttonset {
+    &.cs-button-secondary {
+        > .cs-button:enabled:hover,
+        > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+            background: #475569;
+            color: #ffffff;
+            border-color: #475569;
+        }
+        > .cs-button:enabled:focus,
+        > .cs-button:not(button):not(a):not(.cs-disabled):focus {
+            box-shadow: 0 0 0 0.08rem #e2e8f0;
+        }
+    }
+}
+
+.cs-splitbutton,
+.cs-fileupload-choose {
+    &.cs-button-secondary {
+        > .cs-button:enabled:hover,
+        > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+            background: #475569;
+            color: #ffffff;
+            border-color: #475569;
+        }
+    }
+}
+
+.cs-splitbutton.cs-button-secondary > .cs-button:enabled:focus,
+.cs-splitbutton.cs-button-secondary
+    > .cs-button:not(button):not(a):not(.cs-disabled):focus,
+.cs-fileupload-choose.cs-button-secondary:enabled:focus,
+.cs-fileupload-choose.cs-button-secondary:not(button):not(a):not(
+        .cs-disabled
+    ):focus {
+    box-shadow: 0 0 0 0.08rem #e2e8f0;
+}
+
+.cs-buttonset.cs-button-secondary > .cs-button:enabled:active,
+.cs-buttonset.cs-button-secondary
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-secondary > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-secondary
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-secondary:enabled:active,
+.cs-fileupload-choose.cs-button-secondary:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: #334155;
+    color: #ffffff;
+    border-color: #334155;
+}
+.cs-buttonset.cs-button-secondary > .cs-button.cs-button-outlined,
+.cs-splitbutton.cs-button-secondary > .cs-button.cs-button-outlined,
+.cs-fileupload-choose.cs-button-secondary.cs-button-outlined {
+    background-color: transparent;
+    color: #64748b;
+    border: 1px solid;
+}
+.cs-buttonset.cs-button-secondary > .cs-button.cs-button-outlined:enabled:hover,
+.cs-buttonset.cs-button-secondary
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-secondary
+    > .cs-button.cs-button-outlined:enabled:hover,
+.cs-splitbutton.cs-button-secondary
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-secondary.cs-button-outlined:enabled:hover,
+.cs-fileupload-choose.cs-button-secondary.cs-button-outlined:not(button):not(
+        a
+    ):not(.cs-disabled):hover {
+    background: rgba(100, 116, 139, 0.04);
+    color: #64748b;
+    border: 1px solid;
+}
+
+.cs-buttonset.cs-button-secondary
+    > .cs-button.cs-button-outlined:enabled:active,
+.cs-buttonset.cs-button-secondary
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-secondary
+    > .cs-button.cs-button-outlined:enabled:active,
+.cs-splitbutton.cs-button-secondary
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-secondary.cs-button-outlined:enabled:active,
+.cs-fileupload-choose.cs-button-secondary.cs-button-outlined:not(button):not(
+        a
+    ):not(.cs-disabled):active {
+    background: rgba(100, 116, 139, 0.16);
+    color: #64748b;
+    border: 1px solid;
+}
+
+.cs-buttonset.cs-button-secondary > .cs-button.cs-button-text,
+.cs-splitbutton.cs-button-secondary > .cs-button.cs-button-text,
+.cs-fileupload-choose.cs-button-secondary.cs-button-text {
+    background-color: transparent;
+    color: #64748b;
+    border-color: transparent;
+}
+.cs-buttonset.cs-button-secondary > .cs-button.cs-button-text:enabled:hover,
+.cs-buttonset.cs-button-secondary
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-secondary > .cs-button.cs-button-text:enabled:hover,
+.cs-splitbutton.cs-button-secondary
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-secondary.cs-button-text:enabled:hover,
+.cs-fileupload-choose.cs-button-secondary.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: rgba(100, 116, 139, 0.04);
+    border-color: transparent;
+    color: #64748b;
+}
+
+.cs-buttonset.cs-button-secondary > .cs-button.cs-button-text:enabled:active,
+.cs-buttonset.cs-button-secondary
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-secondary > .cs-button.cs-button-text:enabled:active,
+.cs-splitbutton.cs-button-secondary
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-secondary.cs-button-text:enabled:active,
+.cs-fileupload-choose.cs-button-secondary.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: rgba(100, 116, 139, 0.16);
+    border-color: transparent;
+    color: #64748b;
+}
+
+.cs-buttonset.cs-button-info > .cs-button,
+.cs-splitbutton.cs-button-info > .cs-button,
+.cs-fileupload-choose.cs-button-info {
+    color: #ffffff;
+    background: var(--info-color);
+    border: 1px solid var(--info-color);
+}
+.cs-button.cs-button-info:not(button):not(a):not(.cs-disabled):hover,
+.cs-buttonset.cs-button-info > .cs-button:enabled:hover,
+.cs-buttonset.cs-button-info
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-info > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-info
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-info:enabled:hover,
+.cs-fileupload-choose.cs-button-info:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+.cs-button.cs-button-info:not(button):not(a):not(.cs-disabled):focus,
+.cs-buttonset.cs-button-info > .cs-button:enabled:focus,
+.cs-buttonset.cs-button-info
+    > .cs-button:not(button):not(a):not(.cs-disabled):focus,
+.cs-splitbutton.cs-button-info > .cs-button:enabled:focus,
+.cs-splitbutton.cs-button-info
+    > .cs-button:not(button):not(a):not(.cs-disabled):focus,
+.cs-fileupload-choose.cs-button-info:enabled:focus,
+.cs-fileupload-choose.cs-button-info:not(button):not(a):not(
+        .cs-disabled
+    ):focus {
+    box-shadow: 0 0 0 0.08rem #bfdbfe;
+}
+.cs-button.cs-button-info:not(button):not(a):not(.cs-disabled):active,
+.cs-buttonset.cs-button-info > .cs-button:enabled:active,
+.cs-buttonset.cs-button-info
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-info > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-info
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-info:enabled:active,
+.cs-fileupload-choose.cs-button-info:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: #1d4ed8;
+    color: #ffffff;
+    border-color: #1d4ed8;
+}
+.cs-buttonset.cs-button-info > .cs-button.cs-button-outlined,
+.cs-splitbutton.cs-button-info > .cs-button.cs-button-outlined,
+.cs-fileupload-choose.cs-button-info.cs-button-outlined {
+    background-color: transparent;
+    color: var(--info-color);
+    border: 1px solid;
+}
+.cs-button.cs-button-info.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):hover,
+.cs-buttonset.cs-button-info > .cs-button.cs-button-outlined:enabled:hover,
+.cs-buttonset.cs-button-info
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-info > .cs-button.cs-button-outlined:enabled:hover,
+.cs-splitbutton.cs-button-info
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-info.cs-button-outlined:enabled:hover,
+.cs-fileupload-choose.cs-button-info.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: rgba(59, 130, 246, 0.04);
+    color: var(--info-color);
+    border: 1px solid;
+}
+.cs-button.cs-button-info.cs-button-outlined:enabled:active,
+.cs-button.cs-button-info.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):active,
+.cs-buttonset.cs-button-info > .cs-button.cs-button-outlined:enabled:active,
+.cs-buttonset.cs-button-info
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-info > .cs-button.cs-button-outlined:enabled:active,
+.cs-splitbutton.cs-button-info
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-info.cs-button-outlined:enabled:active,
+.cs-fileupload-choose.cs-button-info.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: rgba(59, 130, 246, 0.16);
+    color: var(--info-color);
+    border: 1px solid;
+}
+.cs-buttonset.cs-button-info > .cs-button.cs-button-text,
+.cs-splitbutton.cs-button-info > .cs-button.cs-button-text,
+.cs-fileupload-choose.cs-button-info.cs-button-text {
+    background-color: transparent;
+    color: var(--info-color);
+    border-color: transparent;
+}
+.cs-button.cs-button-info.cs-button-text:enabled:hover,
+.cs-button.cs-button-info.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):hover,
+.cs-buttonset.cs-button-info > .cs-button.cs-button-text:enabled:hover,
+.cs-buttonset.cs-button-info
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-info > .cs-button.cs-button-text:enabled:hover,
+.cs-splitbutton.cs-button-info
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-info.cs-button-text:enabled:hover,
+.cs-fileupload-choose.cs-button-info.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: rgba(59, 130, 246, 0.04);
+    border-color: transparent;
+    color: var(--info-color);
+}
+.cs-button.cs-button-info.cs-button-text:enabled:active,
+.cs-button.cs-button-info.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):active,
+.cs-buttonset.cs-button-info > .cs-button.cs-button-text:enabled:active,
+.cs-buttonset.cs-button-info
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-info > .cs-button.cs-button-text:enabled:active,
+.cs-splitbutton.cs-button-info
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-info.cs-button-text:enabled:active,
+.cs-fileupload-choose.cs-button-info.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: rgba(59, 130, 246, 0.16);
+    border-color: transparent;
+    color: var(--info-color);
+}
+
+.cs-buttonset,
+.cs-splitbutton {
+    &.cs-button-success {
+        > .cs-button {
+            color: #ffffff;
+            background: #22c55e;
+            border: 1px solid #22c55e;
+
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                    background: #16a34a;
+                    color: #ffffff;
+                    border-color: #16a34a;
+                }
+                &:focus {
+                    box-shadow: 0 0 0 0.08rem #bbf7d0;
+                }
+                &:active {
+                    background: #15803d;
+                    color: #ffffff;
+                    border-color: #15803d;
+                }
+            }
+
+            &.cs-button-outlined {
+                background-color: transparent;
+                color: #22c55e;
+                border: 1px solid;
+
+                &:enabled,
+                &:not(button):not(a):not(.cs-disabled) {
+                    &:hover {
+                        background: rgba(34, 197, 94, 0.04);
+                        color: #22c55e;
+                        border: 1px solid;
+                    }
+                    &:active {
+                        background: rgba(34, 197, 94, 0.16);
+                        color: #22c55e;
+                        border: 1px solid;
+                    }
+                }
+            }
+            &.cs-button-text {
+                background-color: transparent;
+                color: #22c55e;
+                border-color: transparent;
+
+                &:enabled,
+                &:not(button):not(a):not(.cs-disabled) {
+                    &:hover {
+                        background: rgba(34, 197, 94, 0.04);
+                        border-color: transparent;
+                        color: #22c55e;
+                    }
+                    &:active {
+                        background: rgba(34, 197, 94, 0.16);
+                        border-color: transparent;
+                        color: #22c55e;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cs-fileupload-choose {
+    &.cs-button-success {
+        color: #ffffff;
+        background: #22c55e;
+        border: 1px solid #22c55e;
+
+        &:enabled,
+        &:not(button):not(a):not(.cs-disabled) {
+            &:hover {
+                background: #16a34a;
+                color: #ffffff;
+                border-color: #16a34a;
+            }
+            &:focus {
+                box-shadow: 0 0 0 0.08rem #bbf7d0;
+            }
+            &:active {
+                background: #15803d;
+                color: #ffffff;
+                border-color: #15803d;
+            }
+        }
+
+        &.cs-button-outlined {
+            background-color: transparent;
+            color: #22c55e;
+            border: 1px solid;
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                    background: rgba(34, 197, 94, 0.04);
+                    color: #22c55e;
+                    border: 1px solid;
+                }
+                &:active {
+                    background: rgba(34, 197, 94, 0.16);
+                    color: #22c55e;
+                    border: 1px solid;
+                }
+            }
+        }
+        &.cs-button-text {
+            background-color: transparent;
+            color: #22c55e;
+            border-color: transparent;
+            &:enabled,
+            &:not(button):not(a):not(.cs-disabled) {
+                &:hover {
+                    background: rgba(34, 197, 94, 0.04);
+                    border-color: transparent;
+                    color: #22c55e;
+                }
+                &:active {
+                    background: rgba(34, 197, 94, 0.16);
+                    border-color: transparent;
+                    color: #22c55e;
+                }
+            }
+        }
+    }
+}
+
+.cs-buttonset.cs-button-warning > .cs-button,
+.cs-splitbutton.cs-button-warning > .cs-button,
+.cs-fileupload-choose.cs-button-warning {
+    color: #ffffff;
+    background: #f59e0b;
+    border: 1px solid #f59e0b;
+}
+.cs-button.cs-button-warning:not(button):not(a):not(.cs-disabled):hover,
+.cs-buttonset.cs-button-warning > .cs-button:enabled:hover,
+.cs-buttonset.cs-button-warning
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-warning > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-warning
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-warning:enabled:hover,
+.cs-fileupload-choose.cs-button-warning:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: #d97706;
+    color: #ffffff;
+    border-color: #d97706;
+}
+
+.cs-button.cs-button-warning:not(button):not(a):not(.cs-disabled):focus,
+.cs-buttonset.cs-button-warning > .cs-button:enabled:focus,
+.cs-buttonset.cs-button-warning
+    > .cs-button:not(button):not(a):not(.cs-disabled):focus,
+.cs-splitbutton.cs-button-warning > .cs-button:enabled:focus,
+.cs-splitbutton.cs-button-warning
+    > .cs-button:not(button):not(a):not(.cs-disabled):focus,
+.cs-fileupload-choose.cs-button-warning:enabled:focus,
+.cs-fileupload-choose.cs-button-warning:not(button):not(a):not(
+        .cs-disabled
+    ):focus {
+    box-shadow: 0 0 0 0.08rem #fde68a;
+}
+.cs-button.cs-button-warning:not(button):not(a):not(.cs-disabled):active,
+.cs-buttonset.cs-button-warning > .cs-button:enabled:active,
+.cs-buttonset.cs-button-warning
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-warning > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-warning
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-warning:enabled:active,
+.cs-fileupload-choose.cs-button-warning:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: #b45309;
+    color: #ffffff;
+    border-color: #b45309;
+}
+
+.cs-buttonset.cs-button-warning > .cs-button.cs-button-outlined,
+.cs-splitbutton.cs-button-warning > .cs-button.cs-button-outlined,
+.cs-fileupload-choose.cs-button-warning.cs-button-outlined {
+    background-color: transparent;
+    color: #f59e0b;
+    border: 1px solid;
+}
+
+.cs-button.cs-button-warning.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):hover,
+.cs-buttonset.cs-button-warning > .cs-button.cs-button-outlined:enabled:hover,
+.cs-buttonset.cs-button-warning
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-warning > .cs-button.cs-button-outlined:enabled:hover,
+.cs-splitbutton.cs-button-warning
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-warning.cs-button-outlined:enabled:hover,
+.cs-fileupload-choose.cs-button-warning.cs-button-outlined:not(button):not(
+        a
+    ):not(.cs-disabled):hover {
+    background: rgba(245, 158, 11, 0.04);
+    color: #f59e0b;
+    border: 1px solid;
+}
+.cs-button.cs-button-warning.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):active,
+.cs-buttonset.cs-button-warning > .cs-button.cs-button-outlined:enabled:active,
+.cs-buttonset.cs-button-warning
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-warning
+    > .cs-button.cs-button-outlined:enabled:active,
+.cs-splitbutton.cs-button-warning
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-warning.cs-button-outlined:enabled:active,
+.cs-fileupload-choose.cs-button-warning.cs-button-outlined:not(button):not(
+        a
+    ):not(.cs-disabled):active {
+    background: rgba(245, 158, 11, 0.16);
+    color: #f59e0b;
+    border: 1px solid;
+}
+
+.cs-buttonset.cs-button-warning > .cs-button.cs-button-text,
+.cs-splitbutton.cs-button-warning > .cs-button.cs-button-text,
+.cs-fileupload-choose.cs-button-warning.cs-button-text {
+    background-color: transparent;
+    color: #f59e0b;
+    border-color: transparent;
+}
+.cs-button.cs-button-warning.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):hover,
+.cs-buttonset.cs-button-warning > .cs-button.cs-button-text:enabled:hover,
+.cs-buttonset.cs-button-warning
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-warning > .cs-button.cs-button-text:enabled:hover,
+.cs-splitbutton.cs-button-warning
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-warning.cs-button-text:enabled:hover,
+.cs-fileupload-choose.cs-button-warning.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: rgba(245, 158, 11, 0.04);
+    border-color: transparent;
+    color: #f59e0b;
+}
+.cs-button.cs-button-warning.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):active,
+.cs-buttonset.cs-button-warning > .cs-button.cs-button-text:enabled:active,
+.cs-buttonset.cs-button-warning
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-warning > .cs-button.cs-button-text:enabled:active,
+.cs-splitbutton.cs-button-warning
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-warning.cs-button-text:enabled:active,
+.cs-fileupload-choose.cs-button-warning.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: rgba(245, 158, 11, 0.16);
+    border-color: transparent;
+    color: #f59e0b;
+}
+
+.cs-button.cs-button-help,
+.cs-buttonset.cs-button-help > .cs-button,
+.cs-splitbutton.cs-button-help > .cs-button,
+.cs-fileupload-choose.cs-button-help {
+    color: #ffffff;
+    background: #a855f7;
+    border: 1px solid #a855f7;
+}
+.cs-button.cs-button-help:enabled:hover,
+.cs-button.cs-button-help:not(button):not(a):not(.cs-disabled):hover,
+.cs-buttonset.cs-button-help > .cs-button:enabled:hover,
+.cs-buttonset.cs-button-help
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-help > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-help
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-help:enabled:hover,
+.cs-fileupload-choose.cs-button-help:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: #9333ea;
+    color: #ffffff;
+    border-color: #9333ea;
+}
+.cs-button.cs-button-help:enabled:focus,
+.cs-button.cs-button-help:not(button):not(a):not(.cs-disabled):focus,
+.cs-buttonset.cs-button-help > .cs-button:enabled:focus,
+.cs-buttonset.cs-button-help
+    > .cs-button:not(button):not(a):not(.cs-disabled):focus,
+.cs-splitbutton.cs-button-help > .cs-button:enabled:focus,
+.cs-splitbutton.cs-button-help
+    > .cs-button:not(button):not(a):not(.cs-disabled):focus,
+.cs-fileupload-choose.cs-button-help:enabled:focus,
+.cs-fileupload-choose.cs-button-help:not(button):not(a):not(
+        .cs-disabled
+    ):focus {
+    box-shadow: 0 0 0 0.08rem #e9d5ff;
+}
+.cs-button.cs-button-help:enabled:active,
+.cs-button.cs-button-help:not(button):not(a):not(.cs-disabled):active,
+.cs-buttonset.cs-button-help > .cs-button:enabled:active,
+.cs-buttonset.cs-button-help
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-help > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-help
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-help:enabled:active,
+.cs-fileupload-choose.cs-button-help:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: #7e22ce;
+    color: #ffffff;
+    border-color: #7e22ce;
+}
+.cs-button.cs-button-help.cs-button-outlined,
+.cs-buttonset.cs-button-help > .cs-button.cs-button-outlined,
+.cs-splitbutton.cs-button-help > .cs-button.cs-button-outlined,
+.cs-fileupload-choose.cs-button-help.cs-button-outlined {
+    background-color: transparent;
+    color: #a855f7;
+    border: 1px solid;
+}
+.cs-button.cs-button-help.cs-button-outlined:enabled:hover,
+.cs-button.cs-button-help.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):hover,
+.cs-buttonset.cs-button-help > .cs-button.cs-button-outlined:enabled:hover,
+.cs-buttonset.cs-button-help
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-help > .cs-button.cs-button-outlined:enabled:hover,
+.cs-splitbutton.cs-button-help
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-help.cs-button-outlined:enabled:hover,
+.cs-fileupload-choose.cs-button-help.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: rgba(168, 85, 247, 0.04);
+    color: #a855f7;
+    border: 1px solid;
+}
+.cs-button.cs-button-help.cs-button-outlined:enabled:active,
+.cs-button.cs-button-help.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):active,
+.cs-buttonset.cs-button-help > .cs-button.cs-button-outlined:enabled:active,
+.cs-buttonset.cs-button-help
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-help > .cs-button.cs-button-outlined:enabled:active,
+.cs-splitbutton.cs-button-help
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-help.cs-button-outlined:enabled:active,
+.cs-fileupload-choose.cs-button-help.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: rgba(168, 85, 247, 0.16);
+    color: #a855f7;
+    border: 1px solid;
+}
+.cs-button.cs-button-help.cs-button-text,
+.cs-buttonset.cs-button-help > .cs-button.cs-button-text,
+.cs-splitbutton.cs-button-help > .cs-button.cs-button-text,
+.cs-fileupload-choose.cs-button-help.cs-button-text {
+    background-color: transparent;
+    color: #a855f7;
+    border-color: transparent;
+}
+.cs-button.cs-button-help.cs-button-text:enabled:hover,
+.cs-button.cs-button-help.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):hover,
+.cs-buttonset.cs-button-help > .cs-button.cs-button-text:enabled:hover,
+.cs-buttonset.cs-button-help
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-help > .cs-button.cs-button-text:enabled:hover,
+.cs-splitbutton.cs-button-help
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-help.cs-button-text:enabled:hover,
+.cs-fileupload-choose.cs-button-help.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: rgba(168, 85, 247, 0.04);
+    border-color: transparent;
+    color: #a855f7;
+}
+.cs-button.cs-button-help.cs-button-text:enabled:active,
+.cs-button.cs-button-help.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):active,
+.cs-buttonset.cs-button-help > .cs-button.cs-button-text:enabled:active,
+.cs-buttonset.cs-button-help
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-help > .cs-button.cs-button-text:enabled:active,
+.cs-splitbutton.cs-button-help
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-help.cs-button-text:enabled:active,
+.cs-fileupload-choose.cs-button-help.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: rgba(168, 85, 247, 0.16);
+    border-color: transparent;
+    color: #a855f7;
+}
+
+.cs-button.cs-button-danger,
+.cs-buttonset.cs-button-danger > .cs-button,
+.cs-splitbutton.cs-button-danger > .cs-button,
+.cs-fileupload-choose.cs-button-danger {
+    color: #ffffff;
+    background: #ef4444;
+    border: 1px solid #ef4444;
+}
+.cs-button.cs-button-danger:enabled:hover,
+.cs-button.cs-button-danger:not(button):not(a):not(.cs-disabled):hover,
+.cs-buttonset.cs-button-danger > .cs-button:enabled:hover,
+.cs-buttonset.cs-button-danger
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-danger > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-danger
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-danger:enabled:hover,
+.cs-fileupload-choose.cs-button-danger:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+}
+.cs-button.cs-button-danger:enabled:focus,
+.cs-button.cs-button-danger:not(button):not(a):not(.cs-disabled):focus,
+.cs-buttonset.cs-button-danger > .cs-button:enabled:focus,
+.cs-buttonset.cs-button-danger
+    > .cs-button:not(button):not(a):not(.cs-disabled):focus,
+.cs-splitbutton.cs-button-danger > .cs-button:enabled:focus,
+.cs-splitbutton.cs-button-danger
+    > .cs-button:not(button):not(a):not(.cs-disabled):focus,
+.cs-fileupload-choose.cs-button-danger:enabled:focus,
+.cs-fileupload-choose.cs-button-danger:not(button):not(a):not(
+        .cs-disabled
+    ):focus {
+    box-shadow: 0 0 0 0.08rem #fecaca;
+}
+.cs-button.cs-button-danger:enabled:active,
+.cs-button.cs-button-danger:not(button):not(a):not(.cs-disabled):active,
+.cs-buttonset.cs-button-danger > .cs-button:enabled:active,
+.cs-buttonset.cs-button-danger
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-danger > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-danger
+    > .cs-button:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-danger:enabled:active,
+.cs-fileupload-choose.cs-button-danger:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: #b91c1c;
+    color: #ffffff;
+    border-color: #b91c1c;
+}
+.cs-button.cs-button-danger.cs-button-outlined,
+.cs-buttonset.cs-button-danger > .cs-button.cs-button-outlined,
+.cs-splitbutton.cs-button-danger > .cs-button.cs-button-outlined,
+.cs-fileupload-choose.cs-button-danger.cs-button-outlined {
+    background-color: transparent;
+    color: #ef4444;
+    border: 1px solid;
+}
+.cs-button.cs-button-danger.cs-button-outlined:enabled:hover,
+.cs-button.cs-button-danger.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):hover,
+.cs-buttonset.cs-button-danger > .cs-button.cs-button-outlined:enabled:hover,
+.cs-buttonset.cs-button-danger
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-danger > .cs-button.cs-button-outlined:enabled:hover,
+.cs-splitbutton.cs-button-danger
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-danger.cs-button-outlined:enabled:hover,
+.cs-fileupload-choose.cs-button-danger.cs-button-outlined:not(button):not(
+        a
+    ):not(.cs-disabled):hover {
+    background: rgba(239, 68, 68, 0.04);
+    color: #ef4444;
+    border: 1px solid;
+}
+.cs-button.cs-button-danger.cs-button-outlined:enabled:active,
+.cs-button.cs-button-danger.cs-button-outlined:not(button):not(a):not(
+        .cs-disabled
+    ):active,
+.cs-buttonset.cs-button-danger > .cs-button.cs-button-outlined:enabled:active,
+.cs-buttonset.cs-button-danger
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-danger > .cs-button.cs-button-outlined:enabled:active,
+.cs-splitbutton.cs-button-danger
+    > .cs-button.cs-button-outlined:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-danger.cs-button-outlined:enabled:active,
+.cs-fileupload-choose.cs-button-danger.cs-button-outlined:not(button):not(
+        a
+    ):not(.cs-disabled):active {
+    background: rgba(239, 68, 68, 0.16);
+    color: #ef4444;
+    border: 1px solid;
+}
+.cs-button.cs-button-danger.cs-button-text,
+.cs-buttonset.cs-button-danger > .cs-button.cs-button-text,
+.cs-splitbutton.cs-button-danger > .cs-button.cs-button-text,
+.cs-fileupload-choose.cs-button-danger.cs-button-text {
+    background-color: transparent;
+    color: #ef4444;
+    border-color: transparent;
+}
+.cs-button.cs-button-danger.cs-button-text:enabled:hover,
+.cs-button.cs-button-danger.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):hover,
+.cs-buttonset.cs-button-danger > .cs-button.cs-button-text:enabled:hover,
+.cs-buttonset.cs-button-danger
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-splitbutton.cs-button-danger > .cs-button.cs-button-text:enabled:hover,
+.cs-splitbutton.cs-button-danger
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):hover,
+.cs-fileupload-choose.cs-button-danger.cs-button-text:enabled:hover,
+.cs-fileupload-choose.cs-button-danger.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):hover {
+    background: rgba(239, 68, 68, 0.04);
+    border-color: transparent;
+    color: #ef4444;
+}
+.cs-button.cs-button-danger.cs-button-text:enabled:active,
+.cs-button.cs-button-danger.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):active,
+.cs-buttonset.cs-button-danger > .cs-button.cs-button-text:enabled:active,
+.cs-buttonset.cs-button-danger
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-splitbutton.cs-button-danger > .cs-button.cs-button-text:enabled:active,
+.cs-splitbutton.cs-button-danger
+    > .cs-button.cs-button-text:not(button):not(a):not(.cs-disabled):active,
+.cs-fileupload-choose.cs-button-danger.cs-button-text:enabled:active,
+.cs-fileupload-choose.cs-button-danger.cs-button-text:not(button):not(a):not(
+        .cs-disabled
+    ):active {
+    background: rgba(239, 68, 68, 0.16);
+    border-color: transparent;
+    color: #ef4444;
+}
+
+/*Split Button*/
+.cs-splitbutton {
+    border-radius: 6px;
+
+    &.cs-button-outlined {
+        > .cs-button {
+            background-color: transparent;
+            color: #6366f1;
+            border: 1px solid;
+        }
+        > .cs-button:enabled:hover,
+        > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+            background: rgba(99, 102, 241, 0.04);
+            color: #6366f1;
+        }
+        > .cs-button:enabled:active,
+        > .cs-button:not(button):not(a):not(.cs-disabled):active {
+            background: rgba(99, 102, 241, 0.16);
+            color: #6366f1;
+        }
+    }
+
+    &.cs-button-success {
+        &.cs-button-outlined {
+            > .cs-button {
+                background-color: transparent;
+                color: #22c55e;
+                border: 1px solid;
+
+                &:enabled,
+                &:not(button):not(a):not(.cs-disabled) {
+                    &:hover {
+                        background: rgba(34, 197, 94, 0.04);
+                        color: #22c55e;
+                    }
+                    &:active {
+                        background: rgba(34, 197, 94, 0.16);
+                        color: #22c55e;
+                    }
+                }
+            }
+        }
+        &.cs-button-text {
+            > .cs-button {
+                background-color: transparent;
+                color: #22c55e;
+                border-color: transparent;
+
+                &:enabled,
+                &:not(button):not(a):not(.cs-disabled) {
+                    &:hover {
+                        background: rgba(34, 197, 94, 0.04);
+                        border-color: transparent;
+                        color: #22c55e;
+                    }
+                    &:active {
+                        background: rgba(34, 197, 94, 0.16);
+                        border-color: transparent;
+                        color: #22c55e;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cs-splitbutton.cs-button-outlined.cs-button-plain > .cs-button {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+.cs-splitbutton.cs-button-outlined.cs-button-plain > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-outlined.cs-button-plain
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: #e9ecef;
+    color: #6c757d;
+}
+.cs-splitbutton.cs-button-outlined.cs-button-plain > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-outlined.cs-button-plain
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: #dee2e6;
+    color: #6c757d;
+}
+.cs-splitbutton.cs-button-text > .cs-button {
+    background-color: transparent;
+    color: #6366f1;
+    border-color: transparent;
+}
+.cs-splitbutton.cs-button-text > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(99, 102, 241, 0.04);
+    color: #6366f1;
+    border-color: transparent;
+}
+.cs-splitbutton.cs-button-text > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(99, 102, 241, 0.16);
+    color: #6366f1;
+    border-color: transparent;
+}
+.cs-splitbutton.cs-button-text.cs-button-plain > .cs-button {
+    color: #6c757d;
+}
+.cs-splitbutton.cs-button-text.cs-button-plain > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-text.cs-button-plain
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: #e9ecef;
+    color: #6c757d;
+}
+.cs-splitbutton.cs-button-text.cs-button-plain > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-text.cs-button-plain
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: #dee2e6;
+    color: #6c757d;
+}
+.cs-splitbutton.cs-button-raised {
+    box-shadow:
+        0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.cs-splitbutton.cs-button-rounded {
+    border-radius: 2rem;
+}
+.cs-splitbutton.cs-button-rounded > .cs-button {
+    border-radius: 2rem;
+}
+.cs-splitbutton.cs-button-sm > .cs-button {
+    font-size: 0.875rem;
+    padding: 0.65625rem 1.09375rem;
+}
+.cs-splitbutton.cs-button-sm > .cs-button .cs-button-icon {
+    font-size: 0.875rem;
+}
+.cs-splitbutton.cs-button-lg > .cs-button {
+    font-size: 1.25rem;
+    padding: 0.9375rem 1.5625rem;
+}
+.cs-splitbutton.cs-button-lg > .cs-button .cs-button-icon {
+    font-size: 1.25rem;
+}
+
+.cs-splitbutton.cs-button-secondary.cs-button-outlined > .cs-button {
+    background-color: transparent;
+    color: #64748b;
+    border: 1px solid;
+}
+.cs-splitbutton.cs-button-secondary.cs-button-outlined
+    > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-secondary.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(100, 116, 139, 0.04);
+    color: #64748b;
+}
+.cs-splitbutton.cs-button-secondary.cs-button-outlined
+    > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-secondary.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(100, 116, 139, 0.16);
+    color: #64748b;
+}
+.cs-splitbutton.cs-button-secondary.cs-button-text > .cs-button {
+    background-color: transparent;
+    color: #64748b;
+    border-color: transparent;
+}
+.cs-splitbutton.cs-button-secondary.cs-button-text > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-secondary.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(100, 116, 139, 0.04);
+    border-color: transparent;
+    color: #64748b;
+}
+.cs-splitbutton.cs-button-secondary.cs-button-text > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-secondary.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(100, 116, 139, 0.16);
+    border-color: transparent;
+    color: #64748b;
+}
+
+.cs-splitbutton.cs-button-info.cs-button-outlined > .cs-button {
+    background-color: transparent;
+    color: var(--info-color);
+    border: 1px solid;
+}
+.cs-splitbutton.cs-button-info.cs-button-outlined > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-info.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(59, 130, 246, 0.04);
+    color: var(--info-color);
+}
+.cs-splitbutton.cs-button-info.cs-button-outlined > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-info.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(59, 130, 246, 0.16);
+    color: var(--info-color);
+}
+.cs-splitbutton.cs-button-info.cs-button-text > .cs-button {
+    background-color: transparent;
+    color: var(--info-color);
+    border-color: transparent;
+}
+.cs-splitbutton.cs-button-info.cs-button-text > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-info.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(59, 130, 246, 0.04);
+    border-color: transparent;
+    color: var(--info-color);
+}
+.cs-splitbutton.cs-button-info.cs-button-text > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-info.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(59, 130, 246, 0.16);
+    border-color: transparent;
+    color: var(--info-color);
+}
+
+.cs-splitbutton.cs-button-warning.cs-button-outlined > .cs-button {
+    background-color: transparent;
+    color: #f59e0b;
+    border: 1px solid;
+}
+.cs-splitbutton.cs-button-warning.cs-button-outlined > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-warning.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(245, 158, 11, 0.04);
+    color: #f59e0b;
+}
+.cs-splitbutton.cs-button-warning.cs-button-outlined
+    > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-warning.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(245, 158, 11, 0.16);
+    color: #f59e0b;
+}
+.cs-splitbutton.cs-button-warning.cs-button-text > .cs-button {
+    background-color: transparent;
+    color: #f59e0b;
+    border-color: transparent;
+}
+.cs-splitbutton.cs-button-warning.cs-button-text > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-warning.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(245, 158, 11, 0.04);
+    border-color: transparent;
+    color: #f59e0b;
+}
+.cs-splitbutton.cs-button-warning.cs-button-text > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-warning.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(245, 158, 11, 0.16);
+    border-color: transparent;
+    color: #f59e0b;
+}
+
+.cs-splitbutton.cs-button-help.cs-button-outlined > .cs-button {
+    background-color: transparent;
+    color: #a855f7;
+    border: 1px solid;
+}
+.cs-splitbutton.cs-button-help.cs-button-outlined > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-help.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(168, 85, 247, 0.04);
+    color: #a855f7;
+}
+.cs-splitbutton.cs-button-help.cs-button-outlined > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-help.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(168, 85, 247, 0.16);
+    color: #a855f7;
+}
+.cs-splitbutton.cs-button-help.cs-button-text > .cs-button {
+    background-color: transparent;
+    color: #a855f7;
+    border-color: transparent;
+}
+.cs-splitbutton.cs-button-help.cs-button-text > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-help.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(168, 85, 247, 0.04);
+    border-color: transparent;
+    color: #a855f7;
+}
+.cs-splitbutton.cs-button-help.cs-button-text > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-help.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(168, 85, 247, 0.16);
+    border-color: transparent;
+    color: #a855f7;
+}
+
+.cs-splitbutton.cs-button-danger.cs-button-outlined > .cs-button {
+    background-color: transparent;
+    color: #ef4444;
+    border: 1px solid;
+}
+.cs-splitbutton.cs-button-danger.cs-button-outlined > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-danger.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(239, 68, 68, 0.04);
+    color: #ef4444;
+}
+.cs-splitbutton.cs-button-danger.cs-button-outlined > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-danger.cs-button-outlined
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(239, 68, 68, 0.16);
+    color: #ef4444;
+}
+.cs-splitbutton.cs-button-danger.cs-button-text > .cs-button {
+    background-color: transparent;
+    color: #ef4444;
+    border-color: transparent;
+}
+.cs-splitbutton.cs-button-danger.cs-button-text > .cs-button:enabled:hover,
+.cs-splitbutton.cs-button-danger.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):hover {
+    background: rgba(239, 68, 68, 0.04);
+    border-color: transparent;
+    color: #ef4444;
+}
+.cs-splitbutton.cs-button-danger.cs-button-text > .cs-button:enabled:active,
+.cs-splitbutton.cs-button-danger.cs-button-text
+    > .cs-button:not(button):not(a):not(.cs-disabled):active {
+    background: rgba(239, 68, 68, 0.16);
+    border-color: transparent;
+    color: #ef4444;
+}
+
+.cs-speeddial-button.cs-button.cs-button-icon-only {
+    width: 4rem;
+    height: 4rem;
+}
+.cs-speeddial-button.cs-button.cs-button-icon-only .cs-button-icon {
+    font-size: 1.3rem;
+}
+
+.cs-inputnumber-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.cs-inputnumber-buttons-stacked
+    .cs-button.cs-inputnumber-button
+    .cs-button-label,
+.cs-inputnumber-buttons-horizontal
+    .cs-button.cs-inputnumber-button
+    .cs-button-label {
+    display: none;
+}
+
+.cs-inputnumber-buttons-stacked .cs-button.cs-inputnumber-button-up {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0;
+}
+
+.cs-inputnumber-buttons-stacked .cs-inputnumber-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.cs-inputnumber-buttons-stacked .cs-button.cs-inputnumber-button-down {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0;
+}
+
+.cs-inputnumber-buttons-stacked .cs-inputnumber-button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.cs-inputnumber-buttons-stacked
+    .cs-inputnumber-button-group
+    .cs-button.cs-inputnumber-button {
+    flex: 1 1 auto;
+}
+
+.cs-inputnumber-buttons-horizontal .cs-button.cs-inputnumber-button-up {
+    order: 3;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.cs-inputnumber-buttons-horizontal .cs-inputnumber-input {
+    order: 2;
+    border-radius: 0;
+}
+
+.cs-inputnumber-buttons-horizontal .cs-button.cs-inputnumber-button-down {
+    order: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.cs-inputnumber-buttons-vertical {
+    flex-direction: column;
+}
+
+.cs-inputnumber-buttons-vertical .cs-button.cs-inputnumber-button-up {
+    order: 1;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+}
+
+.cs-inputnumber-buttons-vertical .cs-inputnumber-input {
+    order: 2;
+    border-radius: 0;
+    text-align: center;
+}
+
+.cs-inputnumber-buttons-vertical .cs-button.cs-inputnumber-button-down {
+    order: 3;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%;
+}
+
+.cs-fluid .cs-inputnumber-buttons-vertical .cs-inputnumber-input {
+    width: 100%;
+}

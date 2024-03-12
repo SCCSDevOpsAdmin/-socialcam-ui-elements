@@ -1,0 +1,114 @@
+.cs-multiselect {
+    display: inline-flex;
+    position: relative;
+    user-select: none;
+}
+
+.cs-multiselect-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.cs-multiselect-label-container {
+    overflow: hidden;
+    flex: 1 1 auto;
+    cursor: pointer;
+}
+
+.cs-multiselect-label {
+    display: block;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cs-multiselect-label-empty {
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.cs-multiselect-token {
+    cursor: default;
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.cs-multiselect-token-icon {
+    cursor: pointer;
+}
+
+.cs-multiselect .cs-multiselect-panel {
+    min-width: 100%;
+}
+
+.cs-multiselect-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cs-multiselect-items-wrapper {
+    overflow: auto;
+}
+
+.cs-multiselect-items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cs-multiselect-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.cs-multiselect-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cs-multiselect-filter-container {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.cs-multiselect-filter-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.cs-multiselect-filter-container .cs-inputtext {
+    width: 100%;
+}
+
+.cs-multiselect-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+}
+
+.cs-multiselect-clear-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.cs-fluid .cs-multiselect {
+    display: flex;
+}

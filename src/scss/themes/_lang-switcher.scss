@@ -1,0 +1,60 @@
+.lang-switcher {
+    align-items: center;
+    border-radius: 35px;
+    cursor: pointer;
+    background: var(--color-white);
+    min-width: 0;
+
+    .lang-label {
+        visibility: hidden;
+        display: none;
+        min-width: 100px;
+        color: var(--color-white);
+        margin: 0 1rem;
+        transition: all 2s ease-in-out;
+    }
+
+    .flag {
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        visibility: visible !important;
+    }
+
+    .lang-menu-container {
+        position: absolute;
+    }
+
+    .lang-menu {
+        position: relative;
+        display: block;
+
+        .lang-option {
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0.5rem;
+        }
+
+        .lang-option-menu {
+            background: var(--color-main);
+            display: none;
+        }
+
+        &:hover {
+            .lang-label {
+                visibility: visible;
+                display: block;
+                width: auto;
+            }
+
+            .lang-option-menu {
+                visibility: visible;
+                display: block;
+                transition: all 2s ease-in-out;
+            }
+        }
+    }
+}

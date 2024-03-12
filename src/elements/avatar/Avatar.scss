@@ -1,0 +1,25 @@
+.cs-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+
+    &.cs-avatar-image {
+        background-color: transparent;
+    }
+
+    .cs-avatar-icon {
+        font-size: 1rem;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.cs-avatar-clickable {
+    cursor: pointer;
+}

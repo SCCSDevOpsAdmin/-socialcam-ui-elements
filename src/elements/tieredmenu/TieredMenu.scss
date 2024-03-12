@@ -1,0 +1,47 @@
+.cs-tieredmenu-overlay {
+    position: absolute;
+}
+
+.cs-tieredmenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cs-tieredmenu .cs-submenu-list {
+    position: absolute;
+    min-width: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.cs-tieredmenu .cs-menuitem-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.cs-tieredmenu .cs-menuitem-text {
+    line-height: 1;
+}
+
+.cs-tieredmenu .cs-menuitem {
+    position: relative;
+}
+
+.cs-tieredmenu .cs-menuitem-link .cs-submenu-icon {
+    margin-left: auto;
+}
+
+.cs-tieredmenu .cs-menuitem-active > .cs-submenu-list {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+.cs-tieredmenu .cs-menuitem-active > .cs-submenu-list-flipped {
+    left: -100%;
+}

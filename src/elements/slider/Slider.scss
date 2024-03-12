@@ -1,0 +1,44 @@
+.cs-slider {
+    position: relative;
+}
+
+.cs-slider .cs-slider-handle {
+    position: absolute;
+    cursor: grab;
+    touch-action: none;
+    display: block;
+    z-index: 1;
+}
+
+.cs-slider .cs-slider-handle.cs-slider-handle-active {
+    z-index: 2;
+}
+
+.cs-slider-range {
+    position: absolute;
+    display: block;
+}
+
+.cs-slider-horizontal .cs-slider-range {
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.cs-slider-horizontal .cs-slider-handle {
+    top: 50%;
+}
+
+.cs-slider-vertical {
+    height: 100px;
+}
+
+.cs-slider-vertical .cs-slider-handle {
+    left: 50%;
+}
+
+.cs-slider-vertical .cs-slider-range {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

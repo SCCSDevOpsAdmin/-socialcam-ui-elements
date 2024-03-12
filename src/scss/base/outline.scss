@@ -1,0 +1,59 @@
+$outlineMarginSizes: (
+    0: 0.25rem,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 1rem,
+    4: 1.5rem,
+    5: 2rem,
+    6: 3rem,
+    7: 4rem,
+    8: 5rem,
+);
+@each $prop, $value in $outlineMarginSizes {
+    .m-#{$prop} {
+        margin: $value !important;
+    }
+}
+
+@each $prop, $value in $outlineMarginSizes {
+    .mx-#{$prop} {
+        margin-left: $value !important;
+        margin-right: $value !important;
+    }
+}
+@each $prop, $value in $outlineMarginSizes {
+    .my-#{$prop} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+    }
+}
+
+$outlinePaddingSizes: (
+    0: 0.25rem,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 1rem,
+    4: 1.5rem,
+    5: 2rem,
+    6: 3rem,
+    7: 4rem,
+    8: 5rem,
+);
+@each $prop, $value in $outlinePaddingSizes {
+    .p-#{$prop} {
+        padding: $value !important;
+    }
+}
+
+@each $prop, $value in $outlineMarginSizes {
+    .px-#{$prop} {
+        padding-left: $value !important;
+        padding-right: $value !important;
+    }
+}
+@each $prop, $value in $outlineMarginSizes {
+    .py-#{$prop} {
+        padding-top: $value !important;
+        padding-bottom: $value !important;
+    }
+}

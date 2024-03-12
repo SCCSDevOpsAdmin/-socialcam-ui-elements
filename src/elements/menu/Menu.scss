@@ -1,0 +1,22 @@
+.cs-menu-overlay {
+    position: absolute;
+}
+
+.cs-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cs-menu .cs-menuitem-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.cs-menu .cs-menuitem-text {
+    line-height: 1;
+}

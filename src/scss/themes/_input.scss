@@ -1,0 +1,76 @@
+.cs-inputtext {
+    font-family: var(--font-family-base);
+    font-size: var(--default-font-size);
+    line-height: var(--default-line-height);
+    border: 0.1px solid var(--color-gray-1);
+    border-radius: var(--default-border-radius);
+    background-color: var(--input-bg-color);
+    color: var(--input-font-color);
+    padding: 10px 16px;
+
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+        box-shadow 0.2s;
+    appearance: none;
+
+    &.cs-disabled {
+        opacity: 0.5;
+    }
+    &.cs-invalid {
+        border-color: var(--border-color-error);
+    }
+    &:enabled {
+        &:hover {
+            border-color: #6366f1;
+        }
+        &:focus {
+            outline: 0 none;
+            outline-offset: 0;
+            border-color: #6366f1;
+        }
+    }
+    &.cs-inputtext-sm {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.5rem;
+    }
+    &.cs-inputtext-lg {
+        font-size: 1.25rem;
+        padding: 0.9375rem 0.9375rem;
+    }
+    &.cs-invalid {
+        &.cs-component {
+            border-color: var(--border-color-error);
+        }
+    }
+}
+
+.cs-input-filled {
+    .cs-cascadeselect {
+        background: #e9ecef;
+    }
+    .cs-cascadeselect:not(.cs-disabled):hover {
+        background-color: #e9ecef;
+    }
+    .cs-cascadeselect:not(.cs-disabled).cs-focus {
+        background-color: #ffffff;
+    }
+
+    .cs-checkbox {
+        .cs-checkbox-box {
+            background-color: #e9ecef;
+            .cs-checkbox-box {
+                background-color: #e9ecef;
+                &.cs-highlight {
+                    background: #6366f1;
+                }
+            }
+        }
+        &:not(.cs-checkbox-disabled) {
+            .cs-checkbox-box:hover {
+                background-color: #e9ecef;
+            }
+            .cs-checkbox-box.cs-highlight:hover {
+                background: #4338ca;
+            }
+        }
+    }
+}

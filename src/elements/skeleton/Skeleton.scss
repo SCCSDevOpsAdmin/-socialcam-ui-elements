@@ -1,0 +1,33 @@
+.cs-skeleton {
+    position: relative;
+    overflow: hidden;
+}
+
+.cs-skeleton::after {
+    content: "";
+    animation: cs-skeleton-animation 1.2s infinite;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+.cs-skeleton-circle {
+    border-radius: 50% !important;
+}
+
+.cs-skeleton-none::after {
+   animation: none;
+}
+
+@keyframes cs-skeleton-animation {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}

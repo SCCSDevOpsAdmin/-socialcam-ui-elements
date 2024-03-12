@@ -1,0 +1,78 @@
+.cs-overlaypanel {
+    position: absolute;
+    margin-top: 10px;
+    /* Github #3122: Prevent animation flickering  */
+    top: -9999px;
+    left: -9999px;
+}
+
+.cs-overlaypanel-flipped {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cs-overlaypanel-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animation */
+.cs-overlaypanel-enter {
+    opacity: 0;
+    transform: scaleY(0.8);
+}
+
+.cs-overlaypanel-enter-active {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cs-overlaypanel-enter-done {
+    transform: none;
+}
+
+.cs-overlaypanel-exit {
+    opacity: 1;
+}
+
+.cs-overlaypanel-exit-active {
+    opacity: 0;
+    transition: opacity .1s linear;
+}
+
+.cs-overlaypanel:after, .cs-overlaypanel:before {
+	bottom: 100%;
+    left: calc(var(--overlayArrowLeft, 0) + 1.25rem);
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.cs-overlaypanel:after {
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+.cs-overlaypanel:before {
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+.cs-overlaypanel-flipped:after, .cs-overlaypanel-flipped:before {
+    bottom: auto;
+    top: 100%;
+}
+
+.cs-overlaypanel.cs-overlaypanel-flipped:after {
+    border-bottom-color: transparent;
+}
+
+.cs-overlaypanel.cs-overlaypanel-flipped:before {
+    border-bottom-color: transparent
+}

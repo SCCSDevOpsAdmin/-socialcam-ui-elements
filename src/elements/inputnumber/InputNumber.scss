@@ -1,0 +1,15 @@
+.cs-inputnumber {
+    display: inline-flex;
+}
+
+.cs-inputnumber-input {
+    flex: 1 1 auto;
+}
+
+.cs-fluid .cs-inputnumber {
+    width: 100%;
+}
+
+.cs-fluid .cs-inputnumber .cs-inputnumber-input {
+    width: 1%;
+}

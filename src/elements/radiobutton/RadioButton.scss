@@ -1,0 +1,25 @@
+.cs-radiobutton {
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: bottom;
+}
+
+.cs-radiobutton-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cs-radiobutton-icon {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(0.1);
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+.cs-radiobutton-box.cs-highlight .cs-radiobutton-icon {
+    transform: translateZ(0) scale(1, 1);
+    visibility: visible;
+}

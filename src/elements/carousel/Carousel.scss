@@ -1,0 +1,69 @@
+.cs-carousel {
+	display: flex;
+	flex-direction: column;
+}
+
+.cs-carousel-content {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+
+.cs-carousel-prev,
+.cs-carousel-next {
+	align-self: center;
+	flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.cs-carousel-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.cs-carousel-items-content {
+	overflow: hidden;
+    width: 100%;
+}
+
+.cs-carousel-items-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.cs-carousel-indicators {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cs-carousel-indicator > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Vertical */
+.cs-carousel-vertical .cs-carousel-container {
+	flex-direction: column;
+}
+
+.cs-carousel-vertical .cs-carousel-items-container {
+	flex-direction: column;
+	height: 100%;
+}
+
+/* Keyboard Support */
+.cs-items-hidden .cs-carousel-item {
+	visibility: hidden;
+}
+
+.cs-items-hidden .cs-carousel-item.cs-carousel-item-active {
+	visibility: visible;
+}

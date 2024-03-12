@@ -1,0 +1,31 @@
+.cs-divider {
+    .cs-divider-content {
+        background-color: #ffffff;
+    }
+    &.cs-divider-horizontal {
+        margin: 1.25rem 0;
+        padding: 0 1.25rem;
+        &:before {
+            border-width: 1px 0 0 0;
+            border-color: #dee2e6;
+            //border-top: 1px  solid;
+        }
+
+        .cs-divider-content {
+            padding: 0 0.5rem;
+        }
+    }
+
+    &.cs-divider-vertical {
+        margin: 0 1.25rem;
+        padding: 1.25rem 0;
+        &:before {
+            border-width: 0 0 0 1px;
+            border-color: #dee2e6;
+            //border-left: 1px #dee2e6 solid;
+        }
+        .cs-divider-content {
+            padding: 0.5rem 0;
+        }
+    }
+}

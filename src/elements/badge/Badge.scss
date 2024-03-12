@@ -1,0 +1,32 @@
+.cs-badge {
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.cs-overlay-badge {
+    position: relative;
+
+    .cs-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        transform-origin: 100% 0;
+        margin: 0;
+    }
+}
+
+.cs-badge-dot {
+    width: 0.5rem;
+    min-width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.cs-badge-no-gutter {
+    padding: 0;
+    border-radius: 50%;
+}

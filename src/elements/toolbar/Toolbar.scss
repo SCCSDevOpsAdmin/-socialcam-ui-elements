@@ -1,0 +1,12 @@
+.cs-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cs-toolbar-group-left,
+.cs-toolbar-group-right {
+    display: flex;
+    align-items: center;
+}

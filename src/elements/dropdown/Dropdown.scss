@@ -1,0 +1,108 @@
+.cs-dropdown {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.cs-dropdown-clear-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.cs-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cs-dropdown-label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1 1 auto;
+    width: 1%;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.cs-dropdown-label-empty {
+    overflow: hidden;
+    visibility: hidden;
+}
+
+input.cs-dropdown-label {
+    cursor: default;
+}
+
+.cs-dropdown .cs-dropdown-panel {
+    min-width: 100%;
+}
+
+.cs-dropdown-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cs-dropdown-items-wrapper {
+    overflow: auto;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.cs-dropdown-item {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.cs-dropdown-items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.cs-dropdown-filter {
+    width: 100%;
+}
+
+.cs-dropdown-filter-container {
+    position: relative;
+}
+
+.cs-dropdown-filter-icon,
+.cs-dropdown-filter-clear-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.cs-fluid .cs-dropdown {
+    display: flex;
+}
+
+.cs-fluid .cs-dropdown .cs-dropdown-label {
+    width: 1%;
+}

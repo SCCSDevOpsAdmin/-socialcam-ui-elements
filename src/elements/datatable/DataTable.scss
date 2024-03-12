@@ -1,0 +1,366 @@
+.cs-datatable {
+    position: relative;
+}
+
+.cs-datatable table {
+    border-collapse: collapse;
+    min-width: 100%;
+    table-layout: fixed;
+}
+
+.cs-datatable .cs-sortable-column {
+    cursor: pointer;
+    user-select: none;
+}
+
+.cs-datatable .cs-sortable-disabled {
+    cursor: auto;
+}
+
+.cs-datatable .cs-sortable-column .cs-column-title,
+.cs-datatable .cs-sortable-column .cs-sortable-column-icon,
+.cs-datatable .cs-sortable-column .cs-sortable-column-badge {
+    vertical-align: middle;
+}
+
+.cs-datatable .cs-sortable-column .cs-sortable-column-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-datatable-responsive-scroll > .cs-datatable-wrapper {
+    overflow-x: auto;
+}
+
+.cs-datatable-responsive-scroll > .cs-datatable-wrapper > table,
+.cs-datatable-auto-layout > .cs-datatable-wrapper > table {
+    table-layout: auto;
+}
+
+.cs-datatable-selectable .cs-selectable-row,
+.cs-datatable-selectable-cell .cs-selectable-cell {
+    cursor: pointer;
+}
+
+.cs-datatable-drag-selection-helper {
+    position: absolute;
+    z-index: 99999999;
+}
+
+/* Scrollable */
+.cs-datatable-scrollable .cs-datatable-wrapper {
+    position: relative;
+    overflow: auto;
+}
+
+.cs-datatable-scrollable .cs-datatable-thead,
+.cs-datatable-scrollable .cs-datatable-tbody,
+.cs-datatable-scrollable .cs-datatable-tfoot {
+    display: block;
+}
+
+.cs-datatable-scrollable .cs-datatable-thead > tr,
+.cs-datatable-scrollable .cs-datatable-tbody > tr,
+.cs-datatable-scrollable .cs-datatable-tfoot > tr {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.cs-datatable-scrollable .cs-datatable-thead > tr > th,
+.cs-datatable-scrollable .cs-datatable-tbody > tr > td,
+.cs-datatable-scrollable .cs-datatable-tfoot > tr > td {
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+}
+
+.cs-datatable-scrollable .cs-datatable-thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.cs-datatable-scrollable .cs-datatable-frozen-tbody {
+    position: sticky;
+    z-index: 1;
+}
+
+.cs-datatable-scrollable .cs-datatable-tfoot {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+}
+
+.cs-datatable-scrollable .cs-frozen-column {
+    position: sticky;
+    background: inherit;
+}
+
+.cs-datatable-scrollable th.cs-frozen-column {
+    z-index: 1;
+}
+
+.cs-datatable-scrollable-both .cs-datatable-thead > tr > th,
+.cs-datatable-scrollable-both .cs-datatable-tbody > tr > td,
+.cs-datatable-scrollable-both .cs-datatable-tfoot > tr > td,
+.cs-datatable-scrollable-horizontal
+    .cs-datatable-thead
+    > tr
+    > th
+    .cs-datatable-scrollable-horizontal
+    .cs-datatable-tbody
+    > tr
+    > td,
+.cs-datatable-scrollable-horizontal .cs-datatable-tfoot > tr > td {
+    flex: 0 0 auto;
+}
+
+.cs-datatable-flex-scrollable {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cs-datatable-flex-scrollable .cs-datatable-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.cs-datatable-scrollable .cs-rowgroup-header {
+    position: sticky;
+    z-index: 1;
+}
+
+.cs-datatable-scrollable.cs-datatable-grouped-header .cs-datatable-thead,
+.cs-datatable-scrollable.cs-datatable-grouped-footer .cs-datatable-tfoot {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.cs-datatable-scrollable.cs-datatable-grouped-header .cs-datatable-thead > tr,
+.cs-datatable-scrollable.cs-datatable-grouped-footer .cs-datatable-tfoot > tr {
+    display: table-row;
+}
+
+.cs-datatable-scrollable.cs-datatable-grouped-header
+    .cs-datatable-thead
+    > tr
+    > th,
+.cs-datatable-scrollable.cs-datatable-grouped-footer
+    .cs-datatable-tfoot
+    > tr
+    > td {
+    display: table-cell;
+}
+
+.cs-datatable-virtual-table {
+    position: absolute;
+}
+
+.cs-datatable-scrollable .cs-virtualscroller > .cs-datatable-table {
+    display: inline-block; /* For Safari */
+}
+
+/* Resizable */
+.cs-datatable-resizable > .cs-datatable-wrapper {
+    overflow-x: auto;
+}
+
+.cs-datatable-resizable .cs-datatable-thead > tr > th,
+.cs-datatable-resizable .cs-datatable-tfoot > tr > td,
+.cs-datatable-resizable .cs-datatable-tbody > tr > td {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cs-datatable-resizable .cs-resizable-column {
+    background-clip: padding-box;
+    position: relative;
+}
+
+.cs-datatable-resizable-fit .cs-resizable-column:last-child .cs-column-resizer {
+    display: none;
+}
+
+.cs-datatable .cs-column-resizer {
+    display: block;
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 0.5rem;
+    height: 100%;
+    padding: 0px;
+    cursor: col-resize;
+    border: 1px solid transparent;
+}
+
+.cs-datatable .cs-column-header-content {
+    display: flex;
+    align-items: center;
+}
+
+.cs-datatable .cs-column-resizer-helper {
+    width: 1px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+
+.cs-datatable .cs-row-editor-init,
+.cs-datatable .cs-row-editor-save,
+.cs-datatable .cs-row-editor-cancel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Expand */
+.cs-datatable .cs-row-toggler {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Reorder */
+.cs-datatable-reorder-indicator-up,
+.cs-datatable-reorder-indicator-down {
+    position: absolute;
+    display: none;
+}
+
+.cs-reorderable-column,
+.cs-datatable-reorderablerow-handle {
+    cursor: move;
+}
+
+/* Loader */
+.cs-datatable .cs-datatable-loading-overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Filter */
+.cs-column-filter-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cs-column-filter-menu {
+    display: inline-flex;
+    margin-left: auto;
+}
+
+.cs-column-filter-row .cs-column-filter-element {
+    flex: 1 1 auto;
+    width: 1%;
+}
+
+.cs-column-filter-menu-button,
+.cs-column-filter-clear-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.cs-column-filter-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cs-column-filter-row-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cs-column-filter-row-item {
+    cursor: pointer;
+}
+
+.cs-column-filter-add-button,
+.cs-column-filter-remove-button {
+    justify-content: center;
+}
+
+.cs-column-filter-add-button .cs-button-label,
+.cs-column-filter-remove-button .cs-button-label {
+    flex-grow: 0;
+}
+
+.cs-column-filter-buttonbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cs-column-filter-buttonbar .cs-button:not(.cs-button-icon-only) {
+    width: auto;
+}
+
+/* Responsive */
+.cs-datatable .cs-datatable-tbody > tr > td > .cs-column-title {
+    display: none;
+}
+
+/* VirtualScroller */
+.cs-datatable .cs-virtualscroller-loading {
+    transform: none !important;
+    min-height: 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* Alignment */
+.cs-datatable
+    .cs-datatable-thead
+    > tr
+    > th.cs-align-left
+    > .cs-column-header-content,
+.cs-datatable .cs-datatable-tbody > tr > td.cs-align-left,
+.cs-datatable .cs-datatable-tfoot > tr > td.cs-align-left {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.cs-datatable
+    .cs-datatable-thead
+    > tr
+    > th.cs-align-right
+    > .cs-column-header-content,
+.cs-datatable .cs-datatable-tbody > tr > td.cs-align-right,
+.cs-datatable .cs-datatable-tfoot > tr > td.cs-align-right {
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.cs-datatable
+    .cs-datatable-thead
+    > tr
+    > th.cs-align-center
+    > .cs-column-header-content,
+.cs-datatable .cs-datatable-tbody > tr > td.cs-align-center,
+.cs-datatable .cs-datatable-tfoot > tr > td.cs-align-center {
+    text-align: center;
+    justify-content: center;
+}

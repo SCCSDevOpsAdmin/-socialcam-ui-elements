@@ -1,0 +1,21 @@
+.cs-chip {
+    display: inline-flex;
+    align-items: center;
+
+    .cs-chip-remove-icon {
+        line-height: 1.5;
+        cursor: pointer;
+    }
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+.cs-chip-text {
+    line-height: 1.5;
+}
+
+.cs-chip-icon.csi {
+    line-height: 1.5;
+}

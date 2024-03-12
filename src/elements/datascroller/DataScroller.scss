@@ -1,0 +1,28 @@
+.cs-datascroller {
+}
+
+.cs-datascroller .cs-datascroller-header {
+    text-align: center;
+    padding: 0.5em 0.75em;
+    border-bottom: 0 none;
+}
+
+.cs-datascroller .cs-datascroller-footer {
+    text-align: center;
+    padding: 0.25em 0.625em;
+    border-top: 0px none;
+}
+
+.cs-datascroller .cs-datascroller-content {
+    padding: 0.25em 0.625em;
+}
+
+.cs-datascroller-inline .cs-datascroller-content {
+    overflow: auto;
+}
+
+.cs-datascroller .cs-datascroller-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

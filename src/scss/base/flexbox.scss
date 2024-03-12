@@ -1,0 +1,220 @@
+@mixin flex-gap($gap) {
+    gap: $gap;
+}
+$gapSize: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+    6: 6px,
+    7: 7px,
+    8: 8px,
+    9: 9px,
+    10: 10px,
+    11: 11px,
+    12: 12px,
+    13: 13px,
+    14: 14px,
+    15: 15px,
+    16: 16px,
+    17: 17px,
+    18: 18px,
+    19: 19px,
+    20: 20px,
+    21: 21px,
+    22: 22px,
+    23: 23px,
+    24: 24px,
+    25: 25px,
+    26: 26px,
+    27: 27px,
+    28: 28px,
+    29: 29px,
+    30: 30px,
+    31: 31px,
+    32: 32px,
+    33: 33px,
+    34: 34px,
+    35: 35px,
+    36: 36px,
+    37: 37px,
+    38: 38px,
+    39: 39px,
+    40: 40px,
+);
+
+@each $gname, $gSize in $gapSize {
+    .gap-#{$gname} {
+        gap: $gSize;
+    }
+}
+
+$flexDirection: (
+    row: row,
+    row-reverse: row-reverse,
+    col: column,
+    column-reverse: column-reverse,
+);
+
+@each $fdir, $dir in $flexDirection {
+    .flex-#{$fdir} {
+        display: flex;
+        flex-direction: $dir;
+    }
+}
+
+$flexGrowNums: (0, 1, 2);
+
+@each $num in $flexGrowNums {
+    .flex-grow-#{$num} {
+        flex-grow: $num;
+    }
+}
+
+$flexOrderNums: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+@each $num in $flexOrderNums {
+    .flex-order-#{$num} {
+        order: $num;
+    }
+}
+
+$flexWrap: (
+    wrap: wrap,
+    nowrap: nowrap,
+    wrap-reverse: wrap-reverse,
+);
+
+@each $fdir, $dir in $flexWrap {
+    .flex-#{$fdir} {
+        flex-wrap: $dir;
+    }
+}
+
+$justifyContentOptions: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    stretch: stretch,
+    between: space-between,
+    around: space-around,
+    evenly: space-evenly,
+);
+
+$alignContentOptions: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    stretch: stretch,
+    baseline: baseline,
+);
+
+.cs-evenly-side-sections {
+    display: flex;
+    :nth-child(n) {
+        flex: 2 2;
+    }
+    :only-child {
+        flex: 2 2;
+    }
+
+    :first-child,
+    :last-child {
+        flex: 1 1;
+    }
+}
+
+.cs-evenly-wide-sides {
+    display: flex;
+    :nth-child(n) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    :first-child {
+        align-items: flex-start;
+    }
+    :last-child {
+        align-items: flex-end;
+    }
+
+    :only-child {
+        align-items: center;
+    }
+}
+
+@each $justifyName, $justifyValue in $justifyContentOptions {
+    @each $alignName, $alignValue in $alignContentOptions {
+        .flex-row-#{$justifyName}-#{$alignName} {
+            display: flex;
+            flex-direction: row;
+            justify-content: $justifyValue;
+            align-items: $alignValue;
+        }
+        .flex-col-#{$justifyName}-#{$alignName} {
+            display: flex;
+            flex-direction: column;
+            justify-content: $justifyValue;
+            align-items: $alignValue;
+        }
+    }
+}
+
+@each $pjco, $jco in $justifyContentOptions {
+    .justify-content-#{$pjco} {
+        justify-content: $jco;
+    }
+}
+
+/*Clear below unused Classes*/
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-stretch {
+    align-items: stretch;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-stretch {
+    align-items: stretch;
+}
+
+.flex-col-around {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex-col-between {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-space {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}

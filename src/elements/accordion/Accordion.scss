@@ -1,0 +1,16 @@
+.cs-accordion-header-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    position: relative;
+    text-decoration: none;
+}
+
+.cs-accordion-header-link:focus {
+    z-index: 1;
+}
+
+.cs-accordion-header-text {
+    line-height: 1;
+}

@@ -1,0 +1,173 @@
+.cs-multiselect {
+    background: var(--color-white);
+    border: 1px solid var(--color-light-gray);
+    border-radius: 6px;
+    &:not(.cs-disabled) {
+        &:hover {
+            border-color: var(--color-gray-2);
+        }
+        &.cs-focus {
+            outline: 0 none;
+            outline-offset: 0;
+            border-color: var(--color-gray-2);
+        }
+    }
+    &.cs-multiselect-clearable .cs-multiselect-label {
+        padding-right: 1.75rem;
+    }
+
+    .cs-multiselect-label {
+        padding: 0.75rem 0.75rem;
+        &.cs-placeholder {
+            color: var(--color-gray-1);
+        }
+    }
+
+    &.cs-multiselect-chip .cs-multiselect-token {
+        padding: 0.375rem 0.75rem;
+        margin-right: 0.5rem;
+        background: #eef2ff;
+        color: #4338ca;
+        border-radius: 6px;
+        .cs-multiselect-token-icon {
+            margin-left: 0.5rem;
+        }
+    }
+
+    .cs-multiselect-trigger {
+        background: transparent;
+        color: #6c757d;
+        width: 3rem;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    .cs-multiselect-clear-icon {
+        color: #6c757d;
+        right: 3rem;
+    }
+    &.cs-invalid.cs-component {
+        border-color: var(--border-color-error);
+    }
+}
+
+.cs-inputwrapper-filled {
+    &.cs-multiselect {
+        &.cs-multiselect-chip .cs-multiselect-label {
+            padding: 0.375rem 0.75rem;
+        }
+        &.cs-multiselect-clearable .cs-multiselect-label {
+            padding-right: 1.75rem;
+        }
+    }
+}
+
+.cs-multiselect-panel {
+    background: #ffffff;
+    color: #495057;
+    border: 0 none;
+    border-radius: 6px;
+
+    .cs-multiselect-header {
+        padding: 0.75rem 1.25rem;
+        border-bottom: 1px solid #dee2e6;
+        color: #343a40;
+        background: #f8f9fa;
+        margin: 0;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+
+        .cs-multiselect-filter-container {
+            margin: 0 0.5rem;
+
+            .cs-inputtext {
+                padding-right: 1.75rem;
+            }
+        }
+
+        .cs-multiselect-filter-container .cs-multiselect-filter-icon {
+            right: 0.75rem;
+            color: #6c757d;
+        }
+
+        .cs-multiselect-close {
+            width: 2rem;
+            height: 2rem;
+            color: #6c757d;
+            border: 0 none;
+            background: transparent;
+            border-radius: 50%;
+
+            &:enabled:hover {
+                color: #343a40;
+                border-color: transparent;
+                background: #e9ecef;
+            }
+            &:focus {
+                outline: 0 none;
+                outline-offset: 0;
+            }
+        }
+    }
+}
+
+.cs-multiselect-panel {
+    .cs-multiselect-items {
+        padding: 0.75rem 0;
+
+        .cs-multiselect-item {
+            margin: 0;
+            padding: 0.75rem 1.25rem;
+            border: 0 none;
+            color: #495057;
+            background: transparent;
+            border-radius: 0;
+
+            &.cs-highlight {
+                color: #4338ca;
+                background: #eef2ff;
+            }
+
+            &:not(.cs-highlight):not(.cs-disabled):hover {
+                color: #495057;
+                background: #e9ecef;
+            }
+            &:focus {
+                outline: 0 none;
+                outline-offset: 0;
+            }
+
+            .cs-checkbox {
+                margin-right: 0.5rem;
+            }
+        }
+
+        .cs-multiselect-item-group {
+            margin: 0;
+            padding: 0.75rem 1.25rem;
+            color: #343a40;
+            background: #ffffff;
+            font-weight: 700;
+        }
+
+        .cs-multiselect-empty-message {
+            padding: 0.75rem 1.25rem;
+            color: #495057;
+            background: transparent;
+        }
+    }
+}
+
+.cs-input-filled {
+    .cs-multiselect {
+        background: #e9ecef;
+        &:not(.cs-disabled) {
+            &:hover {
+                background-color: #e9ecef;
+            }
+            &.cs-focus {
+                background-color: #ffffff;
+            }
+        }
+    }
+}

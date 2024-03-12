@@ -1,0 +1,58 @@
+.cs-slider {
+    background: var(--color-gray-2);
+    border: 0 none;
+    border-radius: 3px;
+
+    &.cs-slider-horizontal {
+        height: 6px;
+
+        .cs-slider-handle {
+            margin-top: -8px;
+            margin-left: -8px;
+        }
+    }
+
+    &.cs-slider-vertical {
+        width: 6px;
+
+        .cs-slider-handle {
+            margin-left: -8px;
+            margin-bottom: -8px;
+        }
+    }
+
+    .cs-slider-handle {
+        height: 16px;
+        width: 16px;
+        background: var(--secondary-color);
+
+        &.cs-slider-handle-start {
+            background: var(--primary-color);
+        }
+
+        border-radius: 50%;
+
+        :focus {
+            outline: 0 none;
+            outline-offset: 0;
+            box-shadow: 0 0 0 0.2rem #c7d2fe;
+        }
+    }
+
+    &.cs-slider-vertical {
+        .cs-slider-range {
+            background: linear-gradient(
+                0deg,
+                var(--primary-color) 0%,
+                var(--secondary-color) 100%
+            );
+        }
+    }
+    .cs-slider-range {
+        background: linear-gradient(
+            91.75deg,
+            var(--primary-color) 0%,
+            var(--secondary-color) 100%
+        );
+    }
+}

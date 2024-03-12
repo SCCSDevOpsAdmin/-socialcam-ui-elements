@@ -1,0 +1,66 @@
+.cs-tree-container {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: auto;
+}
+
+.cs-treenode-children {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cs-treenode-selectable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.cs-tree-toggler {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.cs-treenode-leaf > .cs-treenode-content .cs-tree-toggler {
+    visibility: hidden;
+}
+
+.cs-treenode-content {
+    display: flex;
+    align-items: center;
+}
+
+.cs-tree-filter {
+    width: 100%;
+}
+
+.cs-tree-filter-container {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.cs-tree-filter-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.cs-tree-loading {
+    position: relative;
+    min-height: 4rem;
+}
+
+.cs-tree .cs-tree-loading-overlay {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

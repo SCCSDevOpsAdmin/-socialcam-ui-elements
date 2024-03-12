@@ -1,0 +1,84 @@
+.cs-divider-horizontal {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.cs-divider-horizontal:before {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    content: '';
+}
+
+.cs-divider-horizontal.cs-divider-left {
+    justify-content: flex-start;
+}
+
+.cs-divider-horizontal.cs-divider-right {
+    justify-content: flex-end;
+}
+
+.cs-divider-horizontal.cs-divider-center {
+    justify-content: center;
+}
+
+.cs-divider-content {
+    z-index: 1;
+}
+
+.cs-divider-vertical {
+    min-height: 100%;
+    margin: 0 1rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.cs-divider-vertical:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    content: '';
+}
+
+.cs-divider-vertical.cs-divider-top {
+    align-items: flex-start;
+}
+
+.cs-divider-vertical.cs-divider-center {
+    align-items: center;
+}
+
+.cs-divider-vertical.cs-divider-bottom {
+    align-items: flex-end;
+}
+
+.cs-divider-solid.cs-divider-horizontal:before {
+    border-style: solid;
+}
+
+.cs-divider-solid.cs-divider-vertical:before {
+    border-style: solid;
+}
+
+.cs-divider-dashed.cs-divider-horizontal:before {
+    border-style: dashed;
+}
+
+.cs-divider-dashed.cs-divider-vertical:before {
+    border-style: dashed;
+}
+
+.cs-divider-dotted.cs-divider-horizontal:before {
+    border-style: dotted;
+}
+
+.cs-divider-dotted.cs-divider-horizontal:before {
+    border-style: dotted;
+}

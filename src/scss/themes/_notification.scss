@@ -1,0 +1,117 @@
+.cs-toast {
+    opacity: 0.9;
+    margin: 0 auto;
+
+    @media (min-width: 0px) {
+        width: 90%;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 465px;
+    }
+
+    @media (min-width: 1280px) {
+        width: 450px;
+    }
+
+    .cs-toast-message {
+        margin: 0 0 1rem 0;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+
+        .cs-toast-message-content {
+            padding: 19px;
+            border-width: 0 0 0 6px;
+            .cs-toast-message-text {
+                margin: 0 0 0 1rem;
+            }
+            .cs-toast-message-icon {
+                font-size: 24px;
+                margin: auto;
+            }
+            .cs-toast-summary {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+            }
+            .cs-toast-detail {
+                margin: 10px 0 0 0;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        .cs-toast-icon-close {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: transparent;
+            transition: background-color 0.2s, color 0.2s;
+
+            &:hover {
+                border: none;
+            }
+            &:focus {
+                outline: 0 none;
+                outline-offset: 0;
+            }
+        }
+
+        &.cs-toast-message-default {
+            background: #ffffff;
+            border: 2px solid #8d8d8f;
+            border-radius: 20px;
+            color: #8d8d8f;
+
+            .cs-toast-message-icon {
+                color: #8d8d8f;
+            }
+        }
+
+        &.cs-toast-message-info {
+            background: #ffffff;
+            border: 2px solid #4263eb;
+            border-radius: 20px;
+            color: #1f222e;
+            .cs-toast-message-icon {
+                color: #4263eb;
+            }
+        }
+
+        &.cs-toast-message-success {
+            background: #ffffff;
+            border: 2px solid #9cdd49;
+            border-radius: 20px;
+            color: #1f222e;
+            .cs-toast-message-icon {
+                color: #9cdd49;
+            }
+        }
+
+        &.cs-toast-message-warn {
+            background: #ffffff;
+            border: 2px solid #fbbc04;
+            border-radius: 20px;
+            color: #1f222e;
+            .cs-toast-message-icon {
+                color: #fbbc04;
+            }
+        }
+
+        &.cs-toast-message-error {
+            background: #ffffff;
+            border: 2px solid #f784ad;
+            border-radius: 20px;
+            color: #1f222e;
+
+            .cs-toast-message-icon {
+                color: #f784ad;
+            }
+        }
+    }
+}

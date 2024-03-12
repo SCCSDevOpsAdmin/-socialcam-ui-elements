@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        //"noUnusedLocals": true,
+        //"skipLibCheck": true
+        "paths": {
+            "src/*": ["src/*"],
+            "public/*": ["public/*"],
+            "app/*": ["app/*"]
+        }
+    },
+    "baseUrl": "./src",
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.test.ts", "*.test.tsx", "app/**/*"]
+}

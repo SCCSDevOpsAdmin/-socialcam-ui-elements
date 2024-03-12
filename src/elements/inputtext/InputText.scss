@@ -1,0 +1,90 @@
+.cs-inputtext {
+    margin: 0;
+}
+
+.cs-fluid .cs-inputtext {
+    width: 100%;
+}
+
+.cs-inputgroup {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.cs-inputgroucs-addon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-inputgroup .cs-float-label {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.cs-inputgroup .cs-inputtext,
+.cs-fluid .cs-inputgroup .cs-inputtext,
+.cs-inputgroup .cs-inputwrapper,
+.cs-fluid .cs-inputgroup .cs-input {
+    flex: 1 1 auto;
+    width: 1%;
+}
+
+.cs-float-label {
+    display: block;
+    position: relative;
+}
+
+.cs-float-label label {
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    margin-top: -0.5rem;
+    transition-property: all;
+    transition-timing-function: ease;
+    line-height: 1;
+}
+
+.cs-float-label textarea ~ label {
+    top: 1rem;
+}
+
+.cs-float-label input:focus ~ label,
+.cs-float-label input.cs-filled ~ label,
+.cs-float-label textarea:focus ~ label,
+.cs-float-label textarea.cs-filled ~ label,
+.cs-float-label .cs-inputwrapper-focus ~ label,
+.cs-float-label .cs-inputwrapper-filled ~ label {
+    top: -0.75rem;
+    font-size: 12px;
+}
+
+.cs-float-label input:-webkit-autofill ~ label {
+    top: -20px;
+    font-size: 12px;
+}
+
+.cs-input-icon-left,
+.cs-input-icon-right {
+    position: relative;
+    display: inline-block;
+}
+
+.cs-input-icon-left > i,
+.cs-input-icon-right > i,
+.cs-input-icon-left > svg,
+.cs-input-icon-right > svg,
+.cs-input-icon-left > .cs-input-prefix,
+.cs-input-icon-right > .cs-input-suffix {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+.cs-fluid .cs-input-icon-left,
+.cs-fluid .cs-input-icon-right {
+    display: block;
+    width: 100%;
+}

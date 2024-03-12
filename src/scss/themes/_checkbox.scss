@@ -1,0 +1,41 @@
+.cs-checkbox {
+    width: 22px;
+    height: 22px;
+
+    .cs-checkbox-box {
+        background: var(--color-white);
+        border: 1px solid var(--color-gray-1);
+        border-radius: 6px;
+        width: 22px;
+        height: 22px;
+        color: var(--primary-color);
+
+        //&.cs-highlight {
+        //    &:not(.cs-disabled):hover {
+        //        border-color: var(--color-dark-gray);
+        //    }
+        //}
+        .cs-checkbox-icon {
+            transition-duration: 0.2s;
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+    &:not(.cs-checkbox-disabled) {
+        .cs-checkbox-box {
+            //&:hover,
+            //&.cs-highlight:hover {
+            //    border-color: var(--primary-color);
+            //}
+            &.cs-focus {
+                outline: 0 none;
+                outline-offset: 0;
+            }
+        }
+    }
+    &.cs-invalid > .cs-checkbox-box {
+        border-color: var(--border-color-error);
+    }
+}

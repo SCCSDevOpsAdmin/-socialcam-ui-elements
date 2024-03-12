@@ -1,0 +1,88 @@
+.cs-slidemenu {
+    width: 12.5em;
+}
+
+.cs-slidemenu.cs-slidemenu-overlay {
+    position: absolute;
+}
+
+.cs-slidemenu .cs-menu-separator {
+    border-width: 1px 0 0 0;
+}
+
+.cs-slidemenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cs-slidemenu .cs-slidemenu-rootlist {
+    position: absolute;
+    top: 0;
+}
+
+.cs-slidemenu .cs-submenu-list {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 12.5em;
+}
+
+.cs-slidemenu .cs-menuitem-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.cs-slidemenu .cs-menuitem-icon {
+    vertical-align: middle;
+}
+
+.cs-slidemenu .cs-menuitem-text {
+    vertical-align: middle;
+}
+
+.cs-slidemenu .cs-menuitem {
+    position: relative;
+}
+
+.cs-slidemenu .cs-menuitem-link .cs-submenu-icon {
+    margin-left: auto;
+}
+
+.cs-slidemenu .cs-slidemenu-wrapper {
+    position: relative;
+}
+
+.cs-slidemenu .cs-slidemenu-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    height: 100%;
+}
+
+.cs-slidemenu-backward {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.25em;
+    cursor: pointer;
+}
+
+.cs-slidemenu-backward .cs-slidemenu-backward-icon {
+    vertical-align: middle;
+}
+
+.cs-slidemenu-backward span {
+    vertical-align: middle;
+}
+
+.cs-slidemenu .cs-menuitem-active {
+    position: static;
+}
+
+.cs-slidemenu .cs-menuitem-active > .cs-submenu-list {
+    display: block;
+}

@@ -1,0 +1,42 @@
+.cs-badge {
+    background: #6366f1;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+
+    .cs-badge-secondary {
+        background-color: #64748b;
+        color: #ffffff;
+    }
+    .cs-badge-success {
+        background-color: #22c55e;
+        color: #ffffff;
+    }
+    .cs-badge-info {
+        background-color: var(--info-color);
+        color: #ffffff;
+    }
+    .cs-badge-warning {
+        background-color: #f59e0b;
+        color: #ffffff;
+    }
+    .cs-badge-danger {
+        background-color: #ef4444;
+        color: #ffffff;
+    }
+    .cs-badge-lg {
+        font-size: 22px;
+        min-width: 45px;
+        height: 45px;
+        line-height: 45px;
+    }
+    .cs-badge-xl {
+        font-size: 30px;
+        min-width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+}

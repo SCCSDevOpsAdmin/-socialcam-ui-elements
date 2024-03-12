@@ -1,0 +1,70 @@
+.cs-disabled {
+    cursor: not-allowed;
+}
+
+.cs-button-icon-right {
+    order: 1;
+}
+
+.cs-button {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: bottom;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.cs-button-icon-only {
+    justify-content: center;
+
+    .cs-button-label {
+        visibility: hidden;
+        width: 0;
+        flex: 0 0 auto;
+    }
+}
+
+.cs-button-vertical {
+    flex-direction: column;
+}
+
+.cs-button-icon-bottom {
+    order: 2;
+}
+
+.cs-buttonset {
+    .cs-button {
+        margin: 0;
+        &:not(:last-child) {
+            border-right: 0 none;
+        }
+
+        &:not(:first-of-type):not(:last-of-type) {
+            border-radius: 0;
+        }
+
+        &:first-of-type {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &:last-of-type {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        &:focus {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

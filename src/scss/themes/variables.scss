@@ -1,0 +1,79 @@
+* {
+    --surface-a: #ffffff;
+    --surface-b: #f4f4f4;
+    --surface-c: #eaeaea;
+    --surface-d: #c8c8c8;
+    --surface-e: #ffffff;
+    --surface-f: #ffffff;
+    --surface-0: #ffffff;
+    --surface-50: #eef1f2;
+    --surface-100: #dde2e4;
+    --surface-200: #bbc5ca;
+    --surface-300: #98a8af;
+    --surface-400: #768b95;
+    --surface-500: #546e7a;
+    --surface-600: #435862;
+    --surface-700: #324249;
+    --surface-800: #222c31;
+    --surface-900: #111618;
+    --bluegray-100: #f8f9fe;
+    --gray-50: #eef1f2;
+    --gray-100: #dde2e4;
+    --gray-200: #bbc5ca;
+    --gray-300: #98a8af;
+    --gray-400: #768b95;
+    --gray-500: #546e7a;
+    --gray-600: #435862;
+    --gray-700: #324249;
+    --gray-800: #222c31;
+    --gray-900: #111618;
+    --content-padding: 0.571rem 1rem;
+    --inline-spacing: 0.5rem;
+    --border-radius: 3px;
+    --surface-ground: #f4f4f4;
+    --surface-section: #ffffff;
+    --surface-card: #ffffff;
+    --surface-overlay: #ffffff;
+    --surface-border: #c8c8c8;
+    --surface-hover: #eaeaea;
+    --maskbg: rgba(0, 0, 0, 0.4);
+    --focus-ring: 0 0 0 0.2rem #8dcdff;
+    --font-family-base: 'Inter';
+
+    --default-font-size: 16px;
+    --default-line-height: 18px;
+    --default-border-radius: 12px;
+    --large-border-radius: 20px;
+
+    --color-white: #ffffff;
+    --color-black: #1f222e;
+    --color-dark-gray: #5d606e;
+    --color-gray-1: #9fa3af;
+    --color-gray-2: #d0d2d9;
+    --color-light-gray: #f3f4f4;
+    --color-light-green: #9cdd49;
+    --color-success: #9cdd49;
+    --color-danger: #ef4444;
+    --text-color: #333333;
+    --text-color-secondary: #848484;
+    --primary-color-text: #ffffff;
+
+    --primary-hover: #f8f9fe;
+    --primary-color: #4263eb;
+    --secondary-color: #cf9fff;
+    --alternate-color: #f784ad;
+    --main-gradient-color: linear-gradient(
+        91.75deg,
+        var(--primary-color) 0%,
+        var(--secondary-color) 100%
+    );
+    --info-color: #3b82f6;
+
+    --font-color-white: #ffffff;
+
+    --font-color-error: #f784ad;
+    --border-color-error: #f784ad;
+
+    --input-bg-color: #f3f4f4;
+    --input-font-color: #9fa3af;
+}
